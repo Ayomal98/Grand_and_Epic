@@ -38,9 +38,23 @@
             <span class="text2">Epic
             </span>
         </div>
-        <input type="submit" value="Log-In" name="submit" class="btn login-btn" id="login-btn">
-        <input type="submit" value="Sign-Up" name="submit" class="btn signup-btn" id="login-btn">
+        <input type="submit" value="Log-In" name="Log-In" class="btn login-btn" id="btn-login" onclick="openLoginForm()"></a>
+        <input type="submit" value="Sign-Up" name="Sign-Up" class="btn signup-btn" id="btn-submit">
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">+</div>
+                <img src="Images/download.png" alt="" class="customer-logo">
+                <h3 class="login-heading">Log-IN</h3>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Email" class="inputs" required>
+                    <input type="password" placeholder="password" class="inputs" required>
+                    <a href=""><span style="font-weight: bold; color:black;">Forgot your password ?</span></a><br />
+                    <input type="submit" value="Submit" name="Submit-btn" class="log-btn submit">
+                    <input type="reset" value="Cancel" name="Cancel-btn" class="log-btn cancel">
 
+                </form>
+            </div>
+        </div>
 
 
     </div>
