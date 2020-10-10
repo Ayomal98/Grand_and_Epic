@@ -2,7 +2,7 @@
 	<head>
 	<link rel="stylesheet" href="../Css/employee.css">
 		<title>
-		Employee Dashboard
+		Hotel Manager Dashboard
 		</title>
 	</head>	
 	<body bgcolor = "black">
@@ -15,9 +15,11 @@
 				<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-				<a href="#">Leave Requests</a>
-				<a href="#">Duty Roaster</a>
-				<a href="#">Customer Feedback</a>
+				<a href="#"><font size = "4 px">Manage Staff</font></a>
+				<a href="#"><font size = "4 px">Booking Details</font></a>
+                <a href="#"><font size = "4 px">Leave Request</font></a>
+                <a href="#"><font size = "4 px">Promotion</font></a>
+				<a href="#"><font size = "4 px">Customer Feedback</font></a>
 				</div>
 		</div>
 		<div class = "top-right">
@@ -56,7 +58,7 @@
 			<img src = "../Images/Employee.png" height = "40%" >
 		</td>
 		<td>
-			<p style = "font-family :Lato; font-size:20px; color :white;">Employee Dashboard</p>		
+			<p style = "font-family :Lato; font-size:20px; color :white;">Hotel Manager Dashboard</p>		
 		</td>
 		</tr>
 	</table>
@@ -65,13 +67,19 @@
 	<table style ="position:absolute; left:20px; top:350px; width:97%;border: 1px solid white;" >
 		<tr>
 		<th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">Manage Staff</p>		
+		</th>
+		<th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">Booking Details</p>		
+		</th>
+		<th style ="border: 1px solid white;">
 			<p style = "font-family :Lato; font-size:20px; color :white;">Request a Leave</p>		
-		</th>
-		<th style ="border: 1px solid white;">
-			<p style = "font-family :Lato; font-size:20px; color :white;">View Duty Roaster</p>		
-		</th>
-		<th style ="border: 1px solid white;">
-			<p style = "font-family :Lato; font-size:20px; color :white;">View Customer Feedback</p>		
+        </th>
+        <th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">Promotions</p>		
+        </th>
+        <th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">Customer Feedback</p>		
 		</th>
 		</tr>
 		<tr>
@@ -80,10 +88,10 @@
 			<table width= "100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/Calendar.png" height = "50%" >
+					<img src = "../Images/Emplo.png" height = "70%" >
 				</td>
 				<td align ="center">
-					<img src = "../Images/BigCal.png" height = "10%" >
+                    <p style = "font-family :Lato; font-size:20px; color :white;">No. of  <br>Employees -131</p>		
 				</td>
 				</tr>
 			</table>
@@ -94,18 +102,20 @@
 			<table width="100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/T.png" height = "50%">
+					<img src = "../Images/Planner.png" height = "20%">
 				</td>
-				<td rowspan="2" align="center">
-					<img src = "../Images/Duty.png" height = "100%">
+				<td align="center">
+					<img src = "../Images/Book.png" height = "85%">
 				</td>
 				</tr>
 				<tr>
 				<td align ="center">
-					<img src = "../Images/Tick.png" height = "50%">
+					<img src = "../Images/Fork.png" height = "50%">
+                </td>
+                <td align ="center">
+                    <p style = "font-family :Lato; font-size:20px; color :white;">Current <br>Bookings -141</p>		
 				</td>
 				</tr>
-				
 			</table>
 			
 		</td>
@@ -113,20 +123,44 @@
 				<table width= "100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/Feedback.png" height = "50%" >
+					<img src = "../Images/Calendar.png" height = "50%" >
 				</td>
 				<td align ="center">
-					<img src = "../Images/Feed.png" height = "100%" >
+					<img src = "../Images/BIgCal.png" height = "10%" >
 				</td>
 				</tr>
 			</table>
 				
-		</td>
-		</tr>
-		
-	</table>
-	
-	
+        </td>
+        <td style ="border: 1px solid white;" >
+            <table width= "100%">
+            <tr>
+            <td align ="center">
+                <img src = "../Images/discount.png" height = "50%" >
+            </td>
+            <td align ="center">
+                <p style = "font-family :Lato; font-size:20px; color :white;">Existing <br>Promotions -03</p>		
+            </td>
+            </tr>
+        </table>
+            
+    </td>
+    <td style ="border: 1px solid white;" >
+        <table width= "100%">
+        <tr>
+        <td align ="center">
+            <img src = "../Images/Feedback.png" height = "50%" >
+        </td>
+        <td align ="center">
+            <img src = "../Images/Feed.png" height = "90%" >
+        </td>
+        </tr>
+    </table>
+        
+</td>
+		</tr>	
+    </table>
+
 	<div class ="bottom-left">
 		<div class="display">
 		  <img class="mySlides" src="../Images/img17.jpg">
@@ -137,7 +171,18 @@
 		  <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
 		  <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
 	</div>
-
+    <table style ="position:absolute; top : 1450px; left:150px;">
+        <tr>
+            <th>
+                <p style = "font-family :Lato; font-size:20px; color :white;">Bookings Overview of the Year</p>	
+            </th>
+        </tr>
+        <tr>
+            <td align = "center">
+                <img src = "../Images/bar.png" height = "75%" >
+            </td>
+        </tr>
+    </table>
 	<script>
 	var slideIndex = 1;
 	showDivs(slideIndex);
