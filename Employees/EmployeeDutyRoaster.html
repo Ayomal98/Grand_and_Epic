@@ -1,0 +1,97 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../Css/employee.css">
+		<title>
+		Employee Duty Roaster
+		</title>
+	</head>	
+	<body bgcolor = "black">
+
+	<center>
+	<img src="../Images/Logo.png" width="20%">
+	</center>
+		<div class="sidenav">	
+			<button class="dropdown-btn">View Duty Roaster &#128317;
+				<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-container">
+				<a href="EmployeeDashboard.html">Dashboard</a>
+				<a href="EmployeeLeaveRequest.html">Leave Request</a>
+				<a href="EmloyeeViewCustomerFeedback.html">View Customer Feedback</a>
+				</div>
+		</div>
+		<div class = "top-right">
+		<table width = "100%">
+		<tr>
+		<td>
+			<p style = "font-family :Lato; font-size:20px; color :white;">Logged in as</p>		
+		</td>
+		<td>
+			<img src = "../Images/ayomal.png" height = "40%" >
+		</td>
+		</tr>
+	</table>
+	</div>
+	<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+	  this.classList.toggle("active");
+	  var dropdownContent = this.nextElementSibling;
+	  if (dropdownContent.style.display === "block") {
+	  dropdownContent.style.display = "none";
+	  } else {
+	  dropdownContent.style.display = "block";
+	  }
+	  });
+	}
+	</script>
+	
+	
+	<form>
+	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
+		<legend style = "color:white; font-size: 20px">Duty Roaster</legend>
+		
+		<table style = "color:white; font-size: 20px; width:88%;">
+			<tr>
+				<td align="left">Assigned Section:</td>
+				<td align="center"><input type="text" name="section" size="20" value="Room Service"></td>
+			</tr>
+			<tr>
+				<td align="left">Assigned Date:</td>
+				<td align="center"><input type="text" name="date" size="50" value="05/22/2020"></td>
+			</tr>
+			<tr>
+				<td align="left">Allocated Room Numbers:</td>
+				<td align="center"><input type="text" name="rnmbr" size="50" value="05"></td>
+			</tr>
+			<tr>
+				<td align="left">Availability:</td>
+				<td align="left">
+					<input checked="checked" type="radio" name="availablity" value="notavailable" style="margin-left:80px;">Not Available
+					<input type="radio" name="availablity" value="available" style="margin-left:80px;">Available
+				</td>
+			</tr>
+		</table>
+		
+		<br>
+		<table style = "color:white; font-size: 20px; width:81%;">
+			<tr>
+				<td align="right">
+					<input type="button" class="button" value="CANCEL">
+					<input type="button" class="button" value="UPDATE">
+				</td>
+				
+			</tr>
+		</table>
+		
+		
+	</fieldset>
+	</form>
+	
+	
+	</body>
+</html>
