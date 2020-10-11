@@ -2,7 +2,7 @@
 	<head>
 	<link rel="stylesheet" href="../Css/employee.css">
 		<title>
-		Employee Duty Roaster
+		Supervisor Leave Request
 		</title>
 	</head>	
 	<body bgcolor = "black">
@@ -11,13 +11,12 @@
 	<img src="../Images/Logo.png" width="20%">
 	</center>
 		<div class="sidenav">	
-			<button class="dropdown-btn">View Duty Roaster &#128317;
+			<button class="dropdown-btn">Request a leave &#128317;
 				<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-				<a href="EmployeeDashboard.html">Dashboard</a>
-				<a href="EmployeeLeaveRequest.html">Leave Request</a>
-				<a href="EmloyeeViewCustomerFeedback.html">View Customer Feedback</a>
+				<a href="SupervisorDashboard.html">Dashboard</a>
+				<a href="SupervisorAssignEmployeeTasks.html">Assign Employee Tasks</a>
 				</div>
 		</div>
 		<div class = "top-right">
@@ -53,35 +52,29 @@
 	
 	<form>
 	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
-		<legend style = "color:white; font-size: 20px">Duty Roaster</legend>
+		<legend style = "color:white; font-size: 20px">Request a Leave</legend>
 		
-		<table style = "color:white; font-size: 20px; width:88%;">
+		<table style = "color:white; font-size: 20px; width: 90%;s">
 			<tr>
-				<td align="left">Assigned Section:</td>
-				<td align="center"><input type="text" name="section" size="20" value="Room Service"></td>
+				<th align ="center">Leave Start Date</th>
+				<th align ="center">Leave End Date</th>
 			</tr>
 			<tr>
-				<td align="left">Assigned Date:</td>
-				<td align="center"><input type="text" name="date" size="50" value="05/22/2020"></td>
+				<td align="center"><input type="date" name="startdate" size="20" style="width:60%"></td>
+				<td align="center"><input type="date" name="enddate" size="20" style="width:60%"></td>
+			</tr>
+		</table>
+		
+		<br> 
+		
+		<table style = "color:white; font-size: 20px; width:90%; margin-left:auto; margin-right:auto;" >
+			<tr>
+				<td align="left">Supervisor ID:</td>
+				<td align="left"><input type="text" name="id" size="20"></td>
 			</tr>
 			<tr>
-				<td align="left">Allocated Room Numbers:</td>
-				<td align="center"><input type="text" name="rnmbr" size="50" value="S22 / S23"></td>
-			</tr>
-			<tr>
-				<td align="left">Allocated Table Numbers:</td>
-				<td align="center"><input type="text" name="rnmbr" size="50" value="-"></td>
-			</tr>
-			<tr>
-				<td align="left">Allocated Locations:</td>
-				<td align="center"><input type="text" name="rnmbr" size="50" value="-"></td>
-			</tr>
-			<tr>
-				<td align="left">Availability:</td>
-				<td align="left">
-					<input checked="checked" type="radio" name="availablity" value="notavailable" style="margin-left:80px;">Not Available
-					<input type="radio" name="availablity" value="available" style="margin-left:80px;">Available
-				</td>
+				<td align="left">Reason for the leave:</td>
+				<td align="left"><textarea name="Message" rows="5" cols="53" placeholder="Leave your reason here:" style="font-size: 20px;"></textarea></td>
 			</tr>
 		</table>
 		
@@ -90,7 +83,7 @@
 			<tr>
 				<td align="right">
 					<input type="button" class="button" value="CANCEL">
-					<input type="button" class="button" value="UPDATE">
+					<input type="button" class="button" value="SUBMIT">
 				</td>
 				
 			</tr>
