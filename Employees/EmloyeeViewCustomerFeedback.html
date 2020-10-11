@@ -1,0 +1,120 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../Css/employee.css">
+		<title>
+		Employee View Customer Feedback
+		</title>
+	</head>	
+	<body bgcolor = "black">
+
+	<center>
+	<img src="../Images/Logo.png" width="20%">
+	</center>
+		<div class="sidenav">	
+			<button class="dropdown-btn">View Customer Feedback &#128317;
+				<i class="fa fa-caret-down"></i>
+			</button>
+				<div class="dropdown-container">
+				<a href="EmployeeDashboard.html">Dashboard</a>
+				<a href="EmployeeLeaveRequest.html">Leave Request</a>
+				<a href="EmployeeDutyRoaster.html">View Duty Roaster</a>
+				</div>
+		</div>
+		<div class = "top-right">
+		<table width = "100%">
+		<tr>
+		<td>
+			<p style = "font-family :Lato; font-size:20px; color :white;">Logged in as</p>		
+		</td>
+		<td>
+			<img src = "../Images/ayomal.png" height = "40%" >
+		</td>
+		</tr>
+	</table>
+	</div>
+	<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+	  this.classList.toggle("active");
+	  var dropdownContent = this.nextElementSibling;
+	  if (dropdownContent.style.display === "block") {
+	  dropdownContent.style.display = "none";
+	  } else {
+	  dropdownContent.style.display = "block";
+	  }
+	  });
+	}
+	</script>
+	
+	
+	<form>
+	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
+		<legend style = "color:white; font-size: 20px">Customer Feedback</legend>
+		
+		<table style = "color:white; font-size: 20px; width:88%;">
+			<tr>
+				<td align="left">Name:</td>
+				<td align="center"><input type="text" name="name" size="20" value="Kapila"></td>
+			</tr>
+			<tr>
+				<td align="left">Reservation Type:</td>
+				<td align="center"><input type="text" name="rtype" size="50" value="Staying-in"></td>
+			</tr>
+			<tr>
+				<td align="left">Feedback about the Hotel Service and Staff:</td>
+				<td align="center">
+					<textarea name="feedback1" rows="5" cols="45" style="font-size:20px; font-family:sans-serif;">Very friendly staff and the service is really good</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">Rating:</td>
+				<td align="left">
+					<input type="radio" name="rating1" value="excellent" checked style="margin-left:65px;">Excellent
+					<input type="radio" name="rating1" value="good" disabled style="margin-left:65px;">Good
+					<input type="radio" name="rating1" value="fair" disabled style="margin-left:65px;">Fair
+					<input type="radio" name="rating1" value="poor" disabled style="margin-left:65px;">Poor
+				</td>
+			</tr>
+			<tr>
+				<td align="left">Feedback about the Hotel Website:</td>
+				<td align="center">
+					<textarea name="feedback1" rows="5" cols="45" style="font-size:20px; font-family:sans-serif;">Very user-friendly interface and include all the information necessary</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">Rating:</td>
+				<td align="left">
+					<input type="radio" name="rating2" value="excellent" disabled style="margin-left:65px;">Excellent
+					<input type="radio" name="rating2" value="good" checked style="margin-left:65px;">Good
+					<input type="radio" name="rating2" value="fair" disabled style="margin-left:65px;">Fair
+					<input type="radio" name="rating2" value="poor" disabled style="margin-left:65px;">Poor
+				</td>
+			</tr>
+		</table>
+		
+		<br>
+		
+		<table style = "color:white; font-size: 20px; width:81%;">
+			<tr>
+				<td align="left">
+					<a href="#" class="button" style="padding:10px 20px; border-radius:50%">&laquo;</a>
+					<a href="#" class="button" style="padding:10px 20px; border-radius:50%">&raquo;</a>
+				</td>
+				<td align="right">
+					<input type="button" class="button" value="CANCEL">
+					<input type="button" class="button" value="UPDATE">
+				</td>
+			</tr>
+		</table>
+		
+		
+	</fieldset>
+	</form>
+	
+	
+	</body>
+</html>

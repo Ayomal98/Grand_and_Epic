@@ -2,11 +2,10 @@
 	<head>
 	<link rel="stylesheet" href="../Css/employee.css">
 		<title>
-		Employee Dashboard
+		Supervisor Dashboard
 		</title>
 	</head>	
 	<body bgcolor = "black">
-
 	<center>
 	<img src="../Images/Logo.png" width="20%">
 	</center>
@@ -15,17 +14,8 @@
 				<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-<<<<<<< HEAD
-				<a href="EmployeeLeaveRequest.html">Leave Requests</a>
-				<a href="EmployeeDutyRoaster.html">View Duty Roaster</a>
-				<a href="EmloyeeViewCustomerFeedback.html">View Customer Feedback</a>
-=======
-
-				<a href="EmployeeLeaveRequest.html">Leave Requests</a>
-				<a href="EmployeeDutyRoaster.html">View Duty Roaster</a>
-				<a href="EmloyeeViewCustomerFeedback.html">View Customer Feedback</a>
-
->>>>>>> 9a518891137673d71f6f5842df3e29eb4bcea64f
+				<a href="SupervisorAssignEmployeeTasks.html">Assign Employee tasks</a>
+                <a href="SupervisorLeaveRequest.html">Request a Leave</a>
 				</div>
 		</div>
 		<div class = "top-right">
@@ -35,7 +25,7 @@
 			<p style = "font-family :Lato; font-size:20px; color :white;">Logged in as</p>		
 		</td>
 		<td>
-			<img src = "../Images/ayomal.png" height = "40%" >
+			<img src = "../Images/ayomal.png" height = "40%">
 		</td>
 		</tr>
 	</table>
@@ -61,10 +51,10 @@
 	<table style ="position:absolute; top : 240px; width:350px;" >
 		<tr>
 		<td>
-			<img src = "../Images/Employee.png" height = "40%" >
+			<img src = "../Images/Employee.png" height = "40%">
 		</td>
 		<td>
-			<p style = "font-family :Lato; font-size:20px; color :white;">Employee Dashboard</p>		
+			<p style = "font-family :Lato; font-size:20px; color :white;">Supervisor Dashboard</p>		
 		</td>
 		</tr>
 	</table>
@@ -73,13 +63,16 @@
 	<table style ="position:absolute; left:20px; top:350px; width:97%;border: 1px solid white;" >
 		<tr>
 		<th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">Assign Employee Tasks</p>		
+		</th>
+		<th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">View Booking Details</p>		
+		</th>
+		<th style ="border: 1px solid white;">
+			<p style = "font-family :Lato; font-size:20px; color :white;">View Leave Requests</p>		
+        </th>
+        <th style ="border: 1px solid white;">
 			<p style = "font-family :Lato; font-size:20px; color :white;">Request a Leave</p>		
-		</th>
-		<th style ="border: 1px solid white;">
-			<p style = "font-family :Lato; font-size:20px; color :white;">View Duty Roaster</p>		
-		</th>
-		<th style ="border: 1px solid white;">
-			<p style = "font-family :Lato; font-size:20px; color :white;">View Customer Feedback</p>		
 		</th>
 		</tr>
 		<tr>
@@ -88,12 +81,28 @@
 			<table width= "100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/Calendar.png" height = "50%" >
+					<img src = "../Images/roomService.png" height = "50%" >
 				</td>
 				<td align ="center">
-					<img src = "../Images/BigCal.png" height = "10%" >
+					<p style = "color: white; font-size: 20px;">15</p>
 				</td>
-				</tr>
+                </tr>
+                <tr>
+                <td align ="center">
+                    <img src = "../Images/cutlery.png" height = "50%" >
+                </td>
+                <td align ="center">
+                    <p style = "color: white; font-size: 20px;">18</p>
+                </td>
+                </tr>
+                <tr>
+                <td align ="center">
+                    <img src = "../Images/tie.png" height = "50%" >
+                </td>
+                <td align ="center">
+                    <p style = "color: white; font-size: 20px;">2</p>
+                </td>
+                </tr>
 			</table>
 			
 		</td>
@@ -102,33 +111,65 @@
 			<table width="100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/T.png" height = "50%">
+					<img src = "../Images/Calendar.png" height = "50%">
 				</td>
 				<td rowspan="2" align="center">
-					<img src = "../Images/Duty.png" height = "100%">
+					<img src = "../Images/Duty.png" height = "75%">
 				</td>
-				</tr>
-				<tr>
-				<td align ="center">
-					<img src = "../Images/Tick.png" height = "50%">
-				</td>
-				</tr>
-				
-			</table>
-			
-		</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td align ="center">
+                        <img src = "../Images/hotel.png" height = "50%" >
+                    </td>
+                    <td align ="center">
+                        <p style = "color: white; font-size: 20px;">12</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align ="center">
+                        <img src = "../Images/cutlery.png" height = "50%" >
+                    </td>
+                    <td align ="center">
+                        <p style = "color: white; font-size: 20px;">16</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align ="center">
+                        <img src = "../Images/tie.png" height = "50%" >
+                    </td>
+                    <td align ="center">
+                        <p style = "color: white; font-size: 20px;">2</p>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+        
 		<td style ="border: 1px solid white;" >
-				<table width= "100%">
+			<table width= "100%">
 				<tr>
 				<td align ="center">
-					<img src = "../Images/Feedback.png" height = "50%" >
+					<img src = "../Images/Calendar.png" height = "50%" >
 				</td>
 				<td align ="center">
-					<img src = "../Images/Feed.png" height = "100%" >
+					<img src = "../Images/BIgCal.png" height = "10%" >
 				</td>
 				</tr>
 			</table>
-				
+        </td>
+        
+        <td style ="border: 1px solid white;" >
+			<table width= "100%">
+				<tr>
+				<td align ="center">
+					<img src = "../Images/leave.png" height = "50%" >
+				</td>
+				<td align ="center">
+					<img src = "../Images/leaveBig.png" height = "35%" >
+				</td>
+				</tr>
+			</table>
 		</td>
 		</tr>
 		
