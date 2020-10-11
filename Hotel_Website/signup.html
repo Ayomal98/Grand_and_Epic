@@ -8,12 +8,12 @@
     <body>
         <div class="wrap">
             <h2>Sign-up Here</h2>
-            <form>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="text" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="text" placeholder="Contact-number" required>
+            <form method="POST" action="Connect_signup.php">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="contactNum" placeholder="Contact-number" required>
                 <input type="submit" value="Submit">
             </form>
         </div>
