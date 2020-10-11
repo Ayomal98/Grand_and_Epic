@@ -1,0 +1,229 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../Css/employee.css">
+		<title>
+		Hotel Manager Manage Staff
+		</title>
+	</head>	
+	<body bgcolor = "black">
+
+	<center>
+	<img src="../Images/Logo.png" width="20%">
+	</center>
+		<div class="sidenav">	
+			<button class="dropdown-btn">Manage Staff &#128317;
+				<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-container">
+                    <a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
+                    <a href="ManagerBookingDetails.html"><font size = "4 px">Booking Details</font></a>
+                    <a href="#"><font size = "4 px">Leave Request</font></a>
+                    <a href="#"><font size = "4 px">Promotions</font></a>
+                    <a href="#"><font size = "4 px">Customer Feedback</font></a>
+				</div>
+		</div>
+		<div class = "top-right">
+		<table width = "100%">
+		<tr>
+		<td>
+			<p style = "font-family :Lato; font-size:20px; color :white;">Logged in as</p>		
+		</td>
+		<td>
+			<img src = "../Images/ayomal.png" height = "40%" >
+		</td>
+		</tr>
+	</table>
+	</div>
+	<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+	  this.classList.toggle("active");
+	  var dropdownContent = this.nextElementSibling;
+	  if (dropdownContent.style.display === "block") {
+	  dropdownContent.style.display = "none";
+	  } else {
+	  dropdownContent.style.display = "block";
+	  }
+	  });
+	}
+	</script>
+	<form>
+	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
+		<legend style = "color:white; font-size: 20px">Manage Staff</legend>
+		
+        <table style = "color:white; font-size: 20px; width: 100%;">
+            <tr>
+				<td align="center">
+					<input type="button" class="button" value="ADD EMPLOYEES">
+					<input type="button" class="button" value="REMOVE EMPLOYEES">
+				</td>
+				<td>
+                    <table style ="border: 1px solid white; padding: 12px;width:100%">
+                        <tr>
+                            <td>
+                                <p style = "font-family :Lato; font-size:20px; color :white;">Delete Accounts</p>		
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form style= "color:white; font-size:20px;">
+                                    <fieldset>                              
+                                    <label for="fname"><font color = "white">Enter the employee ID:</font></label>
+                                    <input type="text" id="ID" name="empID">
+                                    </fieldset>
+                                </form></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="button" value="DELETE EMPLOYEE">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+			</tr>
+			<tr>	
+			</tr>
+			<tr>	
+			</tr>
+		</table>		
+		
+	</fieldset>
+    </form>
+    <br>
+
+	<table style ="width:100%;border: 1px solid white;position:absolute;top:600px;">
+        <tr>
+            <th>
+                <p style = "font-family :Lato; font-size:25px; color :white;">Current Duty Roster</p>		
+            </th>
+            <th rowspan = "5">
+                <legend style = "color:white; font-size: 25px">Employee Leave Requests</legend>
+                <table style = "color:white;border: 1px solid white; font-size: 20px; width:100%">
+
+                <tr>
+                        <td>Date:</td>
+                        <td><img src = "../Images/Calendar.png" height = "50%" ></td>
+                </tr>    
+                <tr>
+                    <td>Employee ID:</td>
+                    <td><input type="text" name="id" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Reason for the leave:</td>
+                    <td><textarea name="Message" rows="5" cols="37" placeholder="Leave your reason here:" style="font-size: 20px;"></textarea></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <td align = "right" padding = "10px">
+                    <input type="button" class="button" value="ACCEPT REQUEST">
+                </td>
+                <td>
+                    <input type="button" class="button" value="DECLINE REQUEST">
+                </td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td><img src = "../Images/back.png" height = "50%" >
+                        <img src = "../Images/next.png" height = "50%" ></td>
+                </tr>
+                </table>
+            </th>
+        </tr>
+        <tr>
+            <td>
+            <table style ="border: 1px solid white;width:100%" >
+                <tr>
+                <td style ="border: 1px solid white;">
+                    <p style = "font-family :Lato; font-size:20px; color :white;">Employee ID</p>		
+                </td>
+                <td style ="border: 1px solid white;">
+                    <p style = "font-family :Lato; font-size:20px; color :white;">Employee Name</p>		
+                </td>
+                <td style ="border: 1px solid white;">
+                    <p style = "font-family :Lato; font-size:20px; color :white;">Section Assigned</p>		
+                </td>
+                <td style ="border: 1px solid white;">
+                    <p style = "font-family :Lato; font-size:20px; color :white;">Employee Age</p>		
+                </td>
+                </tr>
+                <tr>
+                    <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">E1234</p>
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Shehan Gunawardena</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Superior Rooms</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">29 Yrs</p>  
+                       </td>
+                </tr>
+                <tr>
+                    <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">E6547</p>
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Sanath Abeysiri</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Dine-In Area</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">49 Yrs</p>  
+                       </td>
+                </tr>
+                <tr>
+                    <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">E1244</p>
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Jayanthi Welmilla</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Panoramic Rooms</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">39 Yrs</p>  
+                       </td>
+                </tr>
+                <tr>
+                    <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">E3334</p>
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Thanushi Subasinghe</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Reception</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">25 Yrs</p>  
+                       </td>
+                </tr>
+                <tr>
+                    <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">E3034</p>
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Jayanthi Mendis</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">Room Service</p>  
+                       </td>
+                       <td style ="border: 1px solid white;">
+                        <p style = "font-family :Lato; font-size:15px; color :white;">50 Yrs</p>  
+                       </td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+	
+	</body>
+</html>
