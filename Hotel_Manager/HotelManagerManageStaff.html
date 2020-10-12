@@ -17,9 +17,9 @@
 				<div class="dropdown-container">
                     <a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
                     <a href="ManagerBookingDetails.html"><font size = "4 px">Booking Details</font></a>
-                    <a href="#"><font size = "4 px">Leave Request</font></a>
-                    <a href="#"><font size = "4 px">Promotions</font></a>
-                    <a href="#"><font size = "4 px">Customer Feedback</font></a>
+                    <a href="ManagerLeaveRequest.html"><font size = "4 px">Leave Request</font></a>
+                    <a href="HotelManagerPromotions.html"><font size = "4 px">Promotions</font></a>
+                    <a href="HotelManagerCustomerFeedback.html"><font size = "4 px">Customer Feedback</font></a>
 				</div>
 		</div>
 		<div class = "top-right">
@@ -54,36 +54,45 @@
 	<form>
 	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
 		<legend style = "color:white; font-size: 20px">Manage Staff</legend>
-		
         <table style = "color:white; font-size: 20px; width: 100%;">
             <tr>
-				<td align="center">
-					<input type="button" class="button" value="ADD EMPLOYEES">
-					<input type="button" class="button" value="REMOVE EMPLOYEES">
-				</td>
-				<td>
-                    <table style ="border: 1px solid white; padding: 12px;width:100%">
-                        <tr>
-                            <td>
-                                <p style = "font-family :Lato; font-size:20px; color :white;">Delete Accounts</p>		
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <form style= "color:white; font-size:20px;">
-                                    <fieldset>                              
-                                    <label for="fname"><font color = "white">Enter the employee ID:</font></label>
-                                    <input type="text" id="ID" name="empID">
-                                    </fieldset>
-                                </form></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="button" class="button" value="DELETE EMPLOYEE">
-                            </td>
-                        </tr>
-                    </table>
-                </td>
+				<form>
+                    
+                            <table style = "color:white; font-size: 20px; width:88%;">
+                                <tr>
+                                    <td align="left">First Name:</td>
+                                    <td align="center"><input type="text" name="section" size="20"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">Last Name:</td>
+                                    <td align="center"><input type="text" name="date" size="50"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">Password:</td>
+                                    <td align="center"><input type="password" name="rnmbr" size="50" placeholder="Password"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">Email Address:</td>
+                                    <td align="center"><input type="email" name="rnmbr" size="50"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">Contact No:</td>
+                                    <td align="center"><input type="tel" name="rnmbr" size="20"></td>
+                                </tr>
+                            </table>
+            
+                            <table style = "color:white; font-size: 20px; width:81%;">
+                                <tr>
+                                    <td align="right">
+                                        <input type="button" class="button" value="  ADD  ">
+                                        <input type="button" class="button" value="UPDATE">
+                                        <input type="button" class="button" value="DELETE">
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                 
+                    </form>
 			</tr>
 			<tr>	
 			</tr>
@@ -95,43 +104,51 @@
     </form>
     <br>
 
-	<table style ="width:100%;border: 1px solid white;position:absolute;top:600px;">
+	<table style ="width:100%;border: 1px solid white;position:absolute;top:700px;">
         <tr>
             <th>
                 <p style = "font-family :Lato; font-size:25px; color :white;">Current Duty Roster</p>		
             </th>
             <th rowspan = "5">
-                <legend style = "color:white; font-size: 25px">Employee Leave Requests</legend>
-                <table style = "color:white;border: 1px solid white; font-size: 20px; width:100%">
-
-                <tr>
-                        <td>Date:</td>
-                        <td><img src = "../Images/Calendar.png" height = "50%" ></td>
-                </tr>    
-                <tr>
-                    <td>Employee ID:</td>
-                    <td><input type="text" name="id" size="20"></td>
-                </tr>
-                <tr>
-                    <td>Reason for the leave:</td>
-                    <td><textarea name="Message" rows="5" cols="37" placeholder="Leave your reason here:" style="font-size: 20px;"></textarea></td>
-                </tr>
-                <tr>
-                </tr>
-                <tr></tr>
-                <td align = "right" padding = "10px">
-                    <input type="button" class="button" value="ACCEPT REQUEST">
-                </td>
-                <td>
-                    <input type="button" class="button" value="DECLINE REQUEST">
-                </td>
-                </tr>
-                <tr>
-                        <td></td>
-                        <td><img src = "../Images/back.png" height = "50%" >
-                        <img src = "../Images/next.png" height = "50%" ></td>
-                </tr>
-                </table>
+                <form>
+                    <fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
+                        <legend style = "color:white; font-size: 20px">Respond to Leave Requests of Co-admins</legend>
+                            <table style = "color:white; font-size: 20px; width:88%;">
+                                <tr>
+                                <td align="left">Employee ID:</td>
+                                <td align="left"><input type="text" name="id" size="20" value="E04"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">Leave Start Date:</td>
+                                <td align="left"><input type="text" name="startdate" size="20" value="05/26/2020"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">Leave End Date:</td>
+                                <td align="left"><input type="text" name="enddate" size="20" value="05/27/2020"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">Reason for the leave:</td>
+                                <td align="left"><textarea name="Message" rows="5" cols="53">Medical Leave</textarea></td>
+                            </tr>
+                            </table>
+                
+                            <br>
+                            <table style = "color:white; font-size: 20px; width:75%;">
+                                <tr>
+                                    <td align="left">
+                                        <a href="#" class="button" style="padding:10px 20px; border-radius:50%">&laquo;</a>
+                                        <a href="#" class="button" style="padding:10px 20px; border-radius:50%">&raquo;</a>
+                                    </td>
+                                    <td align="right">
+                                        <input type="button" class="button" value="ACCEPT">
+                                        <input type="button" class="button" value="DECLINE">
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        
+                    </fieldset>
+                    </form>
             </th>
         </tr>
         <tr>
