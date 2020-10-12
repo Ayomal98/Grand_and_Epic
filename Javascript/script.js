@@ -17,3 +17,11 @@ document.getElementById("btn-login").addEventListener("click", function () {
 document.querySelector(".close").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "none";
 });
+
+document.getElementById("btn-signup").addEventListener("click",function(){
+  document.querySelector(".bg-modal-signup").style.display="flex";
+})
+
+document.querySelector(".close-signup").addEventListener("click",function()  {
+  document.querySelector(".bg-modal-signup").style.display="none";
+})
