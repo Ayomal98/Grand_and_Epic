@@ -1,6 +1,3 @@
-<?php require_once('Templates/connection.php'); ?>
-<?php include('Hotel_Website/connect_login.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +45,13 @@
                 <img src="Images/download.png" alt="" class="customer-logo">
                 <h3 class="login-heading">Log-IN</h3>
                 <form action="Hotel_Website/connect_login.php" method="POST">
+                    <div class="user-selection">
+                        <label for="User type">User Type</label>
+                        <select name="User-Type" id="" class="user-type" required>
+                            <option value="Customer" select="selected">Customer</option>
+                            <option value="Employee">Staff</option>
+                        </select>
+                    </div>
                     <input type="text" name="email" placeholder="Email" class="inputs" required>
                     <input type="password" name="password" placeholder="Password" class="inputs" required>
                     <a href=""><span style="font-weight: bold; color:black;">Forgot your password ?</span></a><br />
@@ -107,6 +111,7 @@
         </div>
 
     </div>
+    <?php include 'Hotel_Website/footer.php'; ?>
     <script src="Javascript/script.js"></script>
 </body>
 

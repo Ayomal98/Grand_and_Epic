@@ -159,13 +159,14 @@ h2 {
 
 .modal-content {
   width: 500px;
-  height: 310px;
+  height: 370px;
   background-color: white;
   border-radius: 4px;
   text-align: center;
   padding: 20px;
   position: relative;
 }
+
 
 .modal-content input.inputs {
   width: 50%;
@@ -194,6 +195,7 @@ h2 {
 .login-heading {
   font-size: 25px;
   font-family: sans-serif;
+  margin-bottom: 20px;
 }
 
 .modal-content input.log-btn {
@@ -212,6 +214,15 @@ h2 {
   background-color: black;
   color: #3498db;
 }
+
+.modal-content label{
+  font-weight: bolder;
+  font-family: Poppine;
+}
+
+.modal-content .user-selection{
+  margin-bottom: 20px;
+} 
 
 .body-container {
   margin: 20px 10px;
@@ -371,4 +382,10 @@ h2 {
 
 .offers-container {
   display: flex;
+}
+
+form.reservation-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
