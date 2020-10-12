@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: spa;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.header-container {
+  background-image: url("../Images/pexels-kanishka-ranasinghe-2751667.jpg");
+  background-size: cover;
+  height: 100vh;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  animation: slide 50s infinite;
+}
+
+@keyframes slide {
+  25% {
+    background: url("../Images/pexels-deeana-creates-2565222.jpg");
+    background-size: cover;
+  }
+  50% {
+    background: url("../Images/pexels-pixabay-271639.jpg");
+    background-size: cover;
+  }
+  75% {
+    background: url("../Images/pexels-quark-studio-3201921.jpg");
+    background-size: cover;
+  }
+  100% {
+    background: url("../Images/pexels-kanishka-ranasinghe-2751667.jpg");
+    background-size: cover;
+  }
+}
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #050407;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 23px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #d5d2d9;
+  transform: scale(1.3);
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 35px;
+  margin-left: 50px;
+}
+
+.heading {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+}
+
+.btn {
+  border: 1px solid #3498db;
+  padding: 7.5px;
+  font-size: 20px;
+  /* border-radius: 15px; */
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  overflow: hidden;
+  background: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 75, 0.75);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.login-btn {
+  right: 200px;
+  margin-right: -10px;
+}
+
+.text-container {
+  text-align: center;
+  position: absolute;
+  top: 17.5px;
+  left: 45%;
+}
+
+.text-container span {
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  display: block;
+}
+
+.text1 {
+  font-size: 50px;
+  left: 8px;
+  margin-bottom: 20px;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+.text2 {
+  font-size: 30px;
+  color: thistle;
+  letter-spacing: 5px;
+}
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: black;
+  opacity: 0.9;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  display: none;
+  transition: all ease-in 0.4s;
+}
+
+.modal-content {
+  width: 500px;
+  height: 310px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-content input.inputs {
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+  padding: 5px;
+  border-radius: 4px;
+  border-color: black;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.customer-logo {
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
+}
+
+.login-heading {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.modal-content input.log-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 7px;
+  border-radius: 4px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.modal-content input.log-btn:hover {
+  transform: scale(1.2);
+  background-color: black;
+  color: #3498db;
+}
+
+.body-container {
+  margin: 20px 10px;
+}
+
+.slide-image {
+  background-image: url("../Images/pexels-pixabay-279805.jpg");
+  width: fit-content;
+}
+.booking-container {
+  border: 2px solid #ccc;
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 200vh;
+  height: 55%;
+  background-color: #fff;
+}
+
+.card {
+  width: 100vh;
+  height: 50vh;
+  display: flex;
+  background: #fff;
+}
+
+.card-img {
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#img01 {
+  background-image: url("../Images/pexels-pixabay-279805.jpg");
+}
+
+#img02 {
+  background-image: url("../Images/pexels-henry-&-co-3556225.jpg");
+}
+#img03 {
+  background-image: url("../Images/pexels-pixabay-279805.jpg");
+}
+
+.card-content {
+  padding: 10% 5%;
+  box-sizing: border-box;
+  width: 50%;
+  background: #0a0a0a;
+}
+
+.card-header {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 0.91;
+  margin: 3vmin 0 3.5vmin;
+  color: #fff;
+  font-family: Poppins;
+}
+
+.card-para {
+  font-size: 1.6vmin;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2.5vmin;
+  color: #fff;
+  font-family: Poppins;
+}
+
+.card-link {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.8vmin;
+  display: block;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.prevnext {
+  position: absolute;
+  width: 4vmin;
+  height: 8vmin;
+  right: 2%;
+  bottom: 0;
+  top: 80%;
+  color: #fff;
+  margin: auto 0;
+}
+
+.pn-btn {
+  color: #fff;
+  width: 100%;
+  height: 50%;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+#prev,
+#next {
+  position: relative;
+  cursor: pointer;
+}
+
+#prev:focus,
+#next:focus {
+  outline: none;
+}
+
+#prev:hover::after,
+#next:hover::after {
+  opacity: 1;
+}
+
+#prev:after,
+#next:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#prev:after {
+  content: "↑";
+}
+
+#next:after {
+  content: "↓";
+}
+
+.box {
+  width: 350px;
+  height: 200px;
+  margin: 20px 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.offers-container {
+  display: flex;
+}
