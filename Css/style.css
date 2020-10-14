@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  overflow-x: hidden;
+  font-family: futuraptbook;
+}
 nav {
   display: flex;
   justify-content: spa;
@@ -12,12 +15,15 @@ nav {
 a {
   text-decoration: none;
 }
+ul {
+  list-style-type: none;
+}
 
 h2 {
   text-align: center;
   font-weight: bold;
-  font-size: 30px;
-  font-family: sans-serif;
+  font-size: 36px;
+  font-family: poppine;
 }
 .header-container {
   background-image: url("../Images/pexels-kanishka-ranasinghe-2751667.jpg");
@@ -55,7 +61,7 @@ h2 {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #050407;
+  background-color: #1b1b1b;
   opacity: 0.9;
   overflow-x: hidden;
   padding-top: 60px;
@@ -69,10 +75,52 @@ h2 {
   color: #fff;
   transition: 0.3s;
 }
+.stayingin-show {
+  display: none;
+}
 
-.side-nav a:hover {
-  color: #d5d2d9;
-  transform: scale(1.3);
+.stayingin-show-show {
+  display: block;
+}
+.side-nav ul li a {
+  width: 100%;
+  border-left: 5px solid transparent;
+  position: relative;
+}
+.side-nav ul li a:hover {
+  color: #3498db;
+  transform: scaleX(1.3);
+  border-left: #3498db;
+  background-color: #1e1e1e;
+}
+
+.side-nav a:active {
+  background-color: #fff;
+  color: #1b1b1b;
+}
+
+.side-nav ul ul li {
+  position: static;
+  border-bottom: none;
+}
+
+.side-nav ul ul li a {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 40px;
+}
+
+.side-nav ul li a span {
+  position: absolute;
+  top: 40%;
+  right: -20px;
+  transform: translateY(-40%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+
+.side-nav ul li a:hover span {
+  transform: rotate(-180deg);
 }
 
 .side-nav .btn-close {
@@ -83,6 +131,60 @@ h2 {
   margin-left: 50px;
 }
 
+.side-nav li {
+  line-height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 20px 70px;
+  z-index: 10000;
+  display: none;
+  color: #f0f0f0;
+}
+
+.stickyblack-nav {
+  background: #1b1b1b;
+  color: #fff;
+  display: inline;
+  opacity: 0.6;
+}
+
+.sticky-navbar ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-navbar ul li {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.5s;
+}
+
+.sticky-navbar ul li a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.sticky-navbar ul li a:hover {
+  color: cyan;
+  font-weight: bolder;
+  transform: scale(1.3);
+}
 .heading {
   text-decoration: none;
   color: #fff;
@@ -113,6 +215,11 @@ h2 {
 .login-btn {
   right: 200px;
   margin-right: -10px;
+}
+
+.btn-logout {
+  right: 200px;
+  margin-right: 0px;
 }
 
 .text-container {
@@ -157,7 +264,7 @@ h2 {
   transition: all ease-in 0.4s;
 }
 
-.bg-modal-signup{
+.bg-modal-signup {
   width: 100%;
   height: 100%;
   top: 0;
@@ -171,20 +278,32 @@ h2 {
   transition: all ease-in 0.4s;
 }
 
-.bg-modal-signup input[type=text],input[type=password]{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px 5px;
-    background: rgba(0,0,0,10);
-    outline: none;
-    border: none;
-    border-bottom: 1px dotted #fff;
-    color:#fff;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
+.bg-modal-signup input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 5px;
+  background: rgba(0, 0, 0, 10);
+  outline: none;
+  border: none;
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
 }
-
+.bg-modal-signup input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 5px;
+  background: rgba(0, 0, 0, 10);
+  outline: none;
+  border: none;
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
 
 .modal-content {
   width: 500px;
@@ -196,7 +315,7 @@ h2 {
   position: relative;
 }
 
-.modal-content .signup{
+.modal-content .signup {
   width: 500px;
   height: 450px;
 }
@@ -256,17 +375,17 @@ h2 {
   color: #3498db;
 }
 
-.modal-content label{
+.modal-content label {
   font-weight: bolder;
   font-family: Poppine;
 }
 
-.modal-content .user-selection{
+.modal-content .user-selection {
   margin-bottom: 20px;
-} 
+}
 
 .body-container {
-  margin: 20px 10px;
+  margin: 30px 10px;
 }
 
 .slide-image {
@@ -275,29 +394,22 @@ h2 {
 }
 .booking-container {
   border: 2px solid #ccc;
+  border: none;
   display: flex;
   background-color: #fff;
   overflow: hidden;
   position: relative;
-  border-radius: 4px;
-}
-
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 200vh;
-  height: 55%;
-  background-color: #fff;
+  margin-top: 30px;
 }
 
 .card {
-  width: 100vh;
+  width: 120%;
   height: 50vh;
   display: flex;
   background: #fff;
+  margin-right: 80px;
+  padding: 0px;
+  border-radius: 10px;
 }
 
 .card-img {
@@ -315,15 +427,14 @@ h2 {
 #img02 {
   background-image: url("../Images/pexels-henry-&-co-3556225.jpg");
 }
-#img03 {
-  background-image: url("../Images/pexels-pixabay-279805.jpg");
-}
 
 .card-content {
   padding: 10% 5%;
   box-sizing: border-box;
-  width: 50%;
-  background: #0a0a0a;
+  width: 60%;
+  background: #737373;
+  color: #000;
+  margin-right: 40px;
 }
 
 .card-header {
@@ -332,7 +443,7 @@ h2 {
   text-transform: capitalize;
   line-height: 0.91;
   margin: 3vmin 0 3.5vmin;
-  color: #fff;
+  color: #000;
   font-family: Poppins;
 }
 
@@ -341,12 +452,14 @@ h2 {
   line-height: 1.8;
   font-weight: 300;
   margin-bottom: 2.5vmin;
-  color: #fff;
+  color: #000;
   font-family: Poppins;
 }
 
 .card-link {
-  color: #fff;
+  color: #f7f7f8;
+  font-weight: bolder;
+  font-size: large;
   font-family: Poppins;
   font-size: 1.8vmin;
   display: block;
@@ -414,17 +527,79 @@ h2 {
 }
 
 .box {
-  width: 350px;
-  height: 200px;
+  width: 450px;
+  height: 250px;
   margin: 20px 30px;
-  border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 7px;
+  background-color: #737373;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  background-color: #000;
+  color: #fff;
 }
 
 .offers-container {
+  max-width: 100%;
+  margin-top: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.box:hover .box-heading {
+  color: #fff;
+  font-weight: bolder;
+}
+.box:hover .box-content {
+  color: antiquewhite;
 }
 
+#customer-icon {
+  font-size: 50px;
+  top: 10px;
+  position: absolute;
+}
+
+#creditcard-icon {
+  font-size: 50px;
+  top: 10px;
+  position: absolute;
+}
+
+#lastmin-icon {
+  font-size: 50px;
+  top: 10px;
+  position: absolute;
+}
+
+.box .box-heading {
+  margin: 15px 4px;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 0.91;
+  margin: 3vmin 0 3.5vmin;
+  color: #000;
+  font-family: Poppins;
+}
+
+.box .box-content {
+  font-size: 1.6vmin;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 2.5vmin;
+  color: #000;
+  font-family: Poppins;
+}
 form.reservation-form {
   display: flex;
   justify-content: center;

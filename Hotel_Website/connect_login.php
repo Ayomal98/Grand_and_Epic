@@ -30,7 +30,7 @@ if (isset($_POST['Submit'])) {
             echo $row["First_Name"];
             $_SESSION["First_Name"] = $row["First_Name"];
             echo $_SESSION["First Name"];
-            header('Location: ../index.php');
+            header('Location: HomePage.php');
         } else {
         }
     }

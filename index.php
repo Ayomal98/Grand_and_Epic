@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand & Epic Hotel</title>
     <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="header-container" id="header-container">
+
+        <div class="sticky-navbar" id="sticky-navbar">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li><a href="#" class="staying-btn">Staying-In</a></li>
+                <ul>
+                    <li><a href="#">Suites</a></li>
+                    <li><a href="#">Panaromic Rooms</a></li>
+                    <li><a href="#">Superior Rooms</a></li>
+                </ul>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">meals</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
+        </div>
 
         <a href="#" onclick="openSlideMenu()">
             <svg width="30" height="30">
@@ -23,13 +40,22 @@
 
 
         <div class="side-nav" id="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br />
-            <a href="#">Home</a><br /><br />
-            <a href="#">Staying-In</a><br /><br />
-            <a href="#">Dining</a><br /><br />
-            <a href="#">Offers</a><br /><br />
-            <a href="#">Events</a>
-
+            <ul>
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br />
+                <li> <a href="#">Home</a></li>
+                <li><a href="#" class="staying-btn">Staying-In
+                        <span class="fas fa-caret-down" id="toggle-btn" onclick="showStayingIn()"></span>
+                    </a></li>
+                <ul class="stayingin-show" id="stayingin-show">
+                    <li><a href="#">Suites</a></li>
+                    <li><a href="#">Panaromic Rooms</a></li>
+                    <li><a href="#">Superior Rooms</a></li>
+                </ul>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">meals</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
         </div>
 
         <div class="text-container">
@@ -82,52 +108,56 @@
     <div class="body-container">
         <h2>Bookings</h2><br />
         <div class="booking-container">
-            <div class="slide active" id="slide">
-                <div class="card">
-                    <div class="card-img" id="img01"></div>
-                    <div class="card-content">
-                        <h class="card-header">Staying-In</h>
-                        <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
-                        <a href="" class="card-link">Read more</a>
-                    </div>
+            <div class="card">
+                <div class="card-img" id="img01"></div>
+                <div class="card-content">
+                    <h class="card-header">Staying-In</h>
+                    <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
+                    <a href="" class="card-link">Read more</a>
                 </div>
-            </div>
-            <div class="slide" id="slide">
-                <div class="card">
-                    <div class="card-img" id="img02"></div>
-                    <div class="card-content">
-                        <h class="card-header">Dine-In</h>
-                        <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
-                        <a href="" class="card-link">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slide ">
-                <div class="card">
-                    <div class="card-img" id="img03"></div>
-                    <div class="card-content">
-                        <h class="card-header">Events</h>
-                        <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
-                        <a href="" class="card-link">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="prevnext">
-                <button class="pn-btn" id="prev"></button>
-                <button class="pn-btn" id="next"></button>
             </div>
 
+            <div class="card">
+                <div class="card-img" id="img02"></div>
+                <div class="card-content">
+                    <h class="card-header">Dine-In</h>
+                    <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
+                    <a href="" class="card-link">Read more</a>
+                </div>
+            </div>
         </div>
-        <h2>Offers</h2>
-        <div class="offers-container">
-            <div class="box Loyalty-offer">Loyalty Offer</div>
-            <div class="box last-minuite">Last Minuite Offer</div>
-            <div class="box dine-in"></div>
+        <div class="prevnext">
+            <button class="pn-btn" id="prev"></button>
+            <button class="pn-btn" id="next"></button>
         </div>
+
+    </div>
+    <h2>Offers</h2>
+    <div class="offers-container">
+        <div class="box">
+            <span class="fas fa-user" id="customer-icon"></span>
+            <div class="box-heading">Loyalty Offer</div>
+            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+            <box class="link">Read more</box>
+        </div>
+        <div class="box">
+            <span class="fab fa-cc-visa" id="creditcard-icon"></span>
+            <div class="box-heading">Credit-Card Offer</div>
+            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+            <box class="link">Read more</box>
+        </div>
+        <div class="box">
+            <span class="fas fa-hourglass-end" id="lastmin-icon"></span>
+            <div class="box-heading">Last-Miniute Offer</div>
+            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+            <box class="link">Read more</box>
+        </div>
+    </div>
 
     </div>
     <?php include 'Hotel_Website/footer.php'; ?>
     <script src="Javascript/script.js"></script>
+
 </body>
 
 </html>
