@@ -6,57 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grand & Epic Hotel</title>
     <link rel="stylesheet" href="Css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="header-container" id="header-container">
 
-        <div class="sticky-navbar" id="sticky-navbar">
-            <ul>
-                <li> <a href="#">Home</a></li>
-                <li><a href="#" class="staying-btn">Staying-In</a></li>
-                <ul>
-                    <li><a href="#">Suites</a></li>
-                    <li><a href="#">Panaromic Rooms</a></li>
-                    <li><a href="#">Superior Rooms</a></li>
-                </ul>
-                <li><a href="#">Dining</a></li>
-                <li><a href="#">meals</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Offers</a></li>
-            </ul>
-        </div>
+        <?php include("Hotel_Website/sticky-nav.php"); ?>
 
-        <a href="#" onclick="openSlideMenu()">
-            <svg width="30" height="30">
-                <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
-                <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
-                <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
-            </svg>
-            <span class="heading">| Menu</span>
-        </a>
-
-
-
-        <div class="side-nav" id="side-nav">
-            <ul>
-                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br />
-                <li> <a href="#">Home</a></li>
-                <li><a href="#" class="staying-btn">Staying-In
-                        <span class="fas fa-caret-down" id="toggle-btn" onclick="showStayingIn()"></span>
-                    </a></li>
-                <ul class="stayingin-show" id="stayingin-show">
-                    <li><a href="#">Suites</a></li>
-                    <li><a href="#">Panaromic Rooms</a></li>
-                    <li><a href="#">Superior Rooms</a></li>
-                </ul>
-                <li><a href="#">Dining</a></li>
-                <li><a href="#">meals</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Offers</a></li>
-            </ul>
-        </div>
+        <?php include("Hotel_Website/side-nav.php"); ?>
 
         <div class="text-container">
             <span class="text1">Grand &</span>
@@ -106,7 +63,7 @@
 
     </div>
     <div class="body-container">
-        <h2>Bookings</h2><br />
+        <h3>Bookings</h3><br />
         <div class="booking-container">
             <div class="card">
                 <div class="card-img" id="img01"></div>
@@ -155,7 +112,7 @@
     </div>
 
     </div>
-    <?php include 'Hotel_Website/footer.php'; ?>
+    <?php include('Hotel_Website/footer.php'); ?>
     <script src="Javascript/script.js"></script>
 
 </body>

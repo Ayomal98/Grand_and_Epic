@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +26,12 @@ h2 {
   font-weight: bold;
   font-size: 36px;
   font-family: poppine;
+}
+
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 36px;
 }
 .header-container {
   background-image: url("../Images/pexels-kanishka-ranasinghe-2751667.jpg");
@@ -54,6 +62,46 @@ h2 {
     background-size: cover;
   }
 }
+
+.header-container-accomodations {
+  background-image: url("../Images/pexels-pixabay-279746.jpg");
+  background-size: cover;
+  animation: slide-accomodations 50s infinite;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+
+@keyframes slide-accomodations {
+  25% {
+    background: url("../Images/pexels-abdel-rahman-abu-baker-2319428.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../Images/pexels-jonas-togo-2907196.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../Images/pexels-donald-tong-189333.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../Images/pexels-pixabay-279746.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .side-nav {
   height: 100%;
   width: 0;
@@ -186,6 +234,12 @@ h2 {
   transform: scale(1.3);
 }
 .heading {
+  text-decoration: futuraptbook;
+  color: #fff;
+  font-size: 40px;
+}
+
+.heading-other {
   text-decoration: none;
   color: #fff;
   font-size: 40px;
@@ -242,6 +296,7 @@ h2 {
   margin-bottom: 20px;
   letter-spacing: 8px;
   margin-bottom: 20px;
+  font-family: Playfair Display;
 }
 
 .text2 {
@@ -605,3 +660,20 @@ form.reservation-form {
   justify-content: center;
   flex-direction: column;
 }
+
+/* .body-container .accomodation .room-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .card-rooms {
+  width: 120%;
+  height: 50vh;
+  display: flex;
+  background: #fff;
+  margin-right: 80px;
+  padding: 0px;
+  border-radius: 10px;
+} */
