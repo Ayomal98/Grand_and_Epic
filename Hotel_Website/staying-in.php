@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accomodations</title>
     <link rel="stylesheet" href="../Css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
             <span class="text2">Epic
             </span>
         </div>
+        <?php include('login-signup-template.php'); ?>
     </div>
     <div class="body-container accomodations">
         <h3>Accomodations</h3>
@@ -26,8 +27,8 @@
         <i class="fas fa-check">Check Out </i>
         <div class="room-container">
             <div class="card-rooms">
+                <h2 class="card-room-header">Superior Rooms</h2>
                 <div class="card-room-img"></div>
-                <h class="card-room-header">Superior Rooms</h>
                 <div class="card-room-para"></div>
             </div>
             <div class="card-rooms">
@@ -43,6 +44,7 @@
         </div>
     </div>
     <script src="../Javascript/script.js"></script>
+    <script src="../Javascript/sticky-nav.js"></script>
 </body>
 
 </html>

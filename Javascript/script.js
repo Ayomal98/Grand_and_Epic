@@ -38,8 +38,3 @@ document.getElementById("btn-signup").addEventListener("click", function () {
 document.querySelector(".close-signup").addEventListener("click", function () {
   document.querySelector(".bg-modal-signup").style.display = "none";
 });
-
-window.addEventListener("scroll", function () {
-  var header = document.getElementById("sticky-navbar");
-  header.classList.toggle("stickyblack-nav", window.scrollY > 1);
-});

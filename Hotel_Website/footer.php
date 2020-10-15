@@ -19,7 +19,7 @@
                     <img src="src/logo.png" width="200px" height="150px">
                 </div>
                 <div class=column>
-                    <div class="left box">
+                    <div class="left box1">
                         <h2>About us</h2>
                         <div class="content">
                             <p>The best place in the island to experience the beauty of Sri Lanka's hill country within the
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class=column>
-                    <div class="center box">
+                    <div class="center box1">
                         <h2>Address</h2>
                         <div class="content">
                             <div class="place">
