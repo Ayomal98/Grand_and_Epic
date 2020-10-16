@@ -109,6 +109,43 @@ h3 {
   }
 }
 
+.header-container-SuperiorRooms {
+  background-image: url("../Images/pexels-pixabay-279746.jpg");
+  background-size: cover;
+  animation: slide-superior 50s infinite;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+@keyframes slide-superior {
+  25% {
+    background: url("../Images/pexels-bich-tran-622164.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../Images/pexels-jonas-togo-2907196.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../Images/pexels-abdel-rahman-abu-baker-2319428.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../Images/pexels-taryn-elliott-4099354.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 .side-nav {
   height: 100%;
   width: 0;
@@ -808,4 +845,109 @@ form.reservation-form {
   background-color: #f0f0f0;
   color: goldenrod;
   border: none;
+}
+
+.superior-rooms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.panaromic-rooms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.suite-rooms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.superior-rooms-wrapper > div {
+  margin: 20px auto;
+}
+
+.panaromic-rooms-wrapper > div {
+  margin: 20px auto;
+}
+
+.suite-rooms-wrapper > div {
+  margin: 20px auto;
+}
+
+.body-container .superior-rooms-wrapper button.book {
+  color: #f0f0f0;
+  background-color: goldenrod;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  width: 110px;
+}
+
+.body-container .panaromic-rooms-wrapper button.book {
+  color: #f0f0f0;
+  background-color: goldenrod;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  width: 110px;
+}
+
+.body-container .suite-rooms-wrapper button.book {
+  color: #f0f0f0;
+  background-color: goldenrod;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  width: 110px;
+}
+
+.room-details {
+  margin: 65px auto;
+  border: none;
+  border-radius: 10px;
+  background-color: goldenrod;
+  padding: 40px;
+}
+
+.room-details-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 80px;
+}
+
+.room-details-wrapper .grid-room-container {
+  background-color: white;
+  border: none;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.room-details-wrapper .room-detail {
+  margin-left: 10px;
+  font-size: 35px;
+}
+
+.grid-room-container .Superior-values {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.image-container img {
+  width: 650px;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,12 +25,12 @@
                     <span class="fas fa-caret-down" id="toggle-btn" onclick="showStayingIn()"></span>
                 </a></li>
             <ul class="stayingin-show" id="stayingin-show">
-                <li><a href="#">Suites</a></li>
-                <li><a href="#">Panaromic Rooms</a></li>
-                <li><a href="#">Superior Rooms</a></li>
+                <li><a href="Hotel_Website/Suite-Rooms.php">Suites</a></li>
+                <li><a href="Hotel_Website/Panaromic-Rooms.php">Panaromic Rooms</a></li>
+                <li><a href="Hotel_Website/Superior-Rooms.php">Superior Rooms</a></li>
             </ul>
             <li><a href="#">Dining<span class="fas fa-utensils"></span></a></li>
-            <li><a href="#">meals<span class="fas fa-hamburger"></span></a></li>
+            <li><a href="Hotel_Website/meals.html">meals<span class="fas fa-hamburger"></span></a></li>
             <li><a href="#">Events<span class="fas fa-handshake"></span></a></li>
             <li><a href="#">Offers<span class="fas fa-credit-card"></span></a></li>
         </ul>

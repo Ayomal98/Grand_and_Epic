@@ -49,7 +49,7 @@
                     </div>
                     <div class="card-room-para">The Panoramic Rooms at Grand & Epic will provide do live up to their name. Your own private balcony will serve as your vantage point – any time. The views over the lake and the Dambulla rock are constant, yet ever changing.</div>
                     <div class="view-book-wrapper">
-                        <button class="view"><a href="Superior-Rooms.php">View Room</a></button>
+                        <button class="view"><a href="Panaromic-Rooms.php">View Room</a></button>
                         <button class="book"><a href="">Book Now</a></button>
                     </div>
 
@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-room-para" style="color:white;">Wide views across the historic land of Sri Lanka, resort facilities of an exceptional kind and enough room for you to relax at complete ease – our suites are, indeed, rather special.</div>
                     <div class="view-book-wrapper">
-                        <button class="view"><a href="Superior-Rooms.php">View Room</a></button>
+                        <button class="view"><a href="Suite-Rooms.php">View Room</a></button>
                         <button class="book"><a href="">Book Now</a></button>
                     </div>
                 </div>

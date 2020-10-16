@@ -33,7 +33,7 @@
                     <div class="card-content">
                         <h class="card-header">Staying-In</h>
                         <p class="card-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta architecto aliquid unde, ipsa laboriosam, dolorem mollitia quae provident molestiae placeat pariatur. Reiciendis, doloribus quaerat! Vitae dignissimos cupiditate sint ut eius?</p>
-                        <a href="" class="card-link">Read more</a>
+                        <a href="Hotel_Website/Staying-in.php" class="card-link">Read more</a>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@
     </div>
     <?php include("Hotel_Website/footer-footer.php"); ?>
     <script src="Javascript/script.js"></script>
-    <script src="../Javascript/sticky-nav.js"></script>
+    <script src="Javascript/sticky-nav.js"></script>
 </body>
 
 </html>
