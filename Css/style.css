@@ -17,6 +17,7 @@ nav {
 
 a {
   text-decoration: none;
+  color: #f0f0f0;
 }
 ul {
   list-style-type: none;
@@ -36,7 +37,7 @@ h3 {
 }
 
 .page-wrapper {
-  min-height: ;
+  min-height: 100vh;
 }
 
 .header-container {
@@ -679,27 +680,61 @@ form.reservation-form {
   align-items: center;
 }
 
-.card-rooms {
+.accomodations .room-container .card-rooms {
   width: 65%;
-  height: 65vh;
+  height: 95vh;
   display: flex;
   background: #fff;
   margin: 40px 80px;
   padding: 0px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
+  border-radius: 4px;
+  justify-content: center;
+  flex-direction: column;
+}
+.accomodations .room-container .card-rooms:nth-child(odd) {
+  width: 65%;
+  height: 95vh;
+  display: flex;
+  background: #686868;
+  margin: 40px 80px;
+  padding: 0px;
+  border: none;
+  border-radius: 4px;
+  color: #f0f0f0;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.card-room-header {
+.accomodations .room-container .card-rooms .card-room-header {
   text-align: center;
   font-size: 30px;
   width: 100%;
   font-family: poppine;
   font-weight: bolder;
+  margin-top: -70px;
+  margin-bottom: 20px;
 }
 
-.card-room-img {
-  background: url("../Images/");
+.accomodations .room-container .card-rooms .card-room-img .img-superior-rooms {
+  width: 80%;
+  height: 60vh;
+  background-position: center;
+  margin-left: 75px;
+  background-size: cover;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.accomodations .room-container .card-rooms .card-room-img .img-panaromic-rooms {
+  width: 80%;
+  height: 60vh;
+  background-position: center;
+  margin-left: 75px;
+  background-size: cover;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 /* footer styling*/
@@ -739,4 +774,38 @@ form.reservation-form {
 
 .footer-section .links a {
   color: #f0f0f0;
+}
+
+.accomodations .room-container .card-rooms .card-room-para {
+  font: medium;
+  color: #000;
+  size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.accomodations .room-container .card-rooms .view-book-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.accomodations .room-container .card-rooms .view-book-wrapper button {
+  padding: 10px;
+  margin-right: 20px;
+  width: 110px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.accomodations .room-container .card-rooms .view-book-wrapper button.book {
+  background-color: goldenrod;
+  color: #f0f0f0;
+  border: none;
+}
+
+.accomodations .room-container .card-rooms .view-book-wrapper button.view a {
+  background-color: #f0f0f0;
+  color: goldenrod;
+  border: none;
 }
