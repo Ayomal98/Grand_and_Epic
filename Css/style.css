@@ -951,3 +951,86 @@ form.reservation-form {
   background-position: center;
   background-size: cover;
 }
+
+.staying-in-booking-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.staying-in-form {
+  display: flex;
+  flex-direction: column;
+}
+form.staying-in-form > label {
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.dine-in-booking-form-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.customer-details {
+  display: flex;
+  margin: 20px auto;
+}
+
+.customer-details input {
+  margin: 20px 20px;
+  padding: 10px;
+}
+
+.meal-container {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.meal-container label {
+  margin: 10px 10px;
+}
+
+.meal-container select {
+  display: inline;
+}
+
+.meal-container #time-period {
+  margin: 20px 20px;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1.3em;
+  padding: 10px;
+  margin: 10px auto;
+  grid-column-gap: 4em;
+}
+
+.dot {
+  height: 36px;
+  width: 36px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.time-period {
+  display: flex;
+  margin: 30px 30px;
+}

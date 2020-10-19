@@ -1,9 +1,9 @@
 <?php include("../Templates/connection.php");
 session_start();
 if (isset($_POST['Submit'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $usertype = $_POST['User-Type'];
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $usertype = mysqli_real_escape_string($con, $_POST['User-Type']);
     $query = '';
     if ($usertype == 'Employee') {
         $query = "SELECT First_Name,Email,Password,User_Role FROM employee WHERE Email='" . $email . "' AND Password='" . $password . "'";
