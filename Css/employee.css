@@ -156,26 +156,18 @@ input[type=password]{
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
-<<<<<<< HEAD
 	display: block;
 }
-textarea[name =Message]{
-=======
-}
+
 textarea[name=Message]{
->>>>>>> 8e6d459b6be84a49a0a601b69eb3761be506824b
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
 	box-sizing: border-box;
 	font-size: 20px;
-<<<<<<< HEAD
 	font-family: sans-serif;
 }
-=======
-	color: black;
-	font-family: sans-serif;
-}
+
 form[type=typeform]{
 	width: 80%;
 	padding: 5px 30px;
@@ -184,7 +176,6 @@ form[type=typeform]{
 	font-size: 20px;
 	color: black;
 }
->>>>>>> 8e6d459b6be84a49a0a601b69eb3761be506824b
 
 .button{
 	background-color: blue;
