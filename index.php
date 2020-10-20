@@ -46,10 +46,6 @@
                     </div>
                 </div>
             </div>
-            <div class="prevnext">
-                <button class="pn-btn" id="prev"></button>
-                <button class="pn-btn" id="next"></button>
-            </div>
 
         </div>
         <h2>Offers</h2>

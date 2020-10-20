@@ -1028,9 +1028,26 @@ form {
   padding: 8px;
   text-align: center;
   color: #f0f0f0;
+  margin: 10px auto;
+}
+.dot.not-avb {
+  background-color: grey;
+  color: black;
 }
 
 .time-period {
   display: flex;
   margin: 30px 30px;
+}
+
+#breakfast-times {
+  display: none;
+}
+
+#lunch-times {
+  display: none;
+}
+
+#dinner-times {
+  display: none;
 }
