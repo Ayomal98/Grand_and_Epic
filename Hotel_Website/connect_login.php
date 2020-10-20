@@ -2,7 +2,7 @@
 session_start();
 if (isset($_POST['Submit'])) {
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $usertype = mysqli_real_escape_string($con, $_POST['User-Type']);
     $query = '';
     if ($usertype == 'Employee') {
