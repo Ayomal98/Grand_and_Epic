@@ -1,5 +1,6 @@
 <?php include("../Templates/connection.php");
-
+$boolTrue = TRUE;
+$boolFalse = False;
 if (isset($_POST['confirm-book-btn'])) {
     $customername = mysqli_real_escape_String($con, $_POST['customer-name']);
     $emailaddress = mysqli_real_escape_string($con, $_POST['customer-email']);
@@ -18,6 +19,8 @@ if (isset($_POST['confirm-book-btn'])) {
     }
     $date = mysqli_real_escape_string($con, $_POST['Dine-in-date']);
     $query = "INSERT INTO dinein_booking (Table_No,Customer_email,Customer_Name,Num_Guests,Meal_Period,Date,Time) VALUES ('" . $tableno . "','" . $emailaddress . "','" . $customername . "','" . $numguests . "','" . $mealperiod . "','" . $date . "','" . $timeperiod . "') ";
+    $insertTablesQuery = "INSERT INTO tables (Table_No,Time,Date,isBooked) VALUES ('" . $tableno . "','" . $timeperiod . "','" . $date . "','" . $boolTrue . "')";
+    mysqli_query($con, $insertTablesQuery);
     mysqli_query($con, $query);
     if ($con->query($query) === TRUE) {
         echo "New record created successfully";

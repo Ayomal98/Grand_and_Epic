@@ -1,4 +1,5 @@
-<?php include("time-inclusion.php"); ?>
+<?php include("time-inclusion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,20 +12,23 @@
 
 <body>
     <div class="dine-in-booking-form-container">
-        <h2>Reservation for Dine-in</h2>
-        <form action="dinein-booking.php" method="post">
+
+        <form action="dinein-booking.php" class="dine-in-form" method="post">
+            <h2 style="font-size:40px;">Reservation for Dine-in</h2>
             <div class="customer-details">
-                <input type="text" name="customer-name" id="" placeholder="Customer Name">
-                <input type="text" name="customer-email" id="" placeholder="Email address">
-                <input type="number" name="number-of-guests" placeholder="No.Of Guests">
+                <input type="text" name="customer-name" id="" placeholder="Customer Name" required>
+                <input type="email" name="customer-email" id="" placeholder="Email address" required>
+                <input type="number" name="number-of-guests" placeholder="No-Guests" min="0" max="10" step="1" style="width:110px;" required>
             </div>
-            <div class="meal-container">
-                <label for="Meal-type">Meal Type</label>
-                <select name="Meal-Period" id="time-period" onchange="mealShow()">
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                </select>
+            <div class="dine-in-details" style="display:flex;align-items:center;">
+                <div class="meal-container">
+                    <label for="Meal-type">Meal Type</label>
+                    <select name="Meal-Period" id="time-period" onchange="mealShow()">
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                    </select>
+                </div>
                 <div class="time-period">
                     <label for="Time-Period">Time Period</label>
                     <div class="breakfast-time-period-selection">
@@ -43,17 +47,26 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="date-container">
+                    <input type="date" name="Dine-in-date">
+                </div>
             </div>
-            <div class="date-container">
-                <input type="date" name="Dine-in-date">
-            </div>
+
             <div class="table-container">
-                <?php include("showtables.php"); ?>
-                <br><input type="text" name="table-no" placeholder="Table-No" style="padding:15px;margin:20px auto"><br>
-                <div class="dot not-avb"></div><span style="margin-left:-20px">Not Available</span><br>
-                <div class="dot"></div><span style=" margin-left:-20px">Available</span><br>
+                <div class="table-showing-container">
+                    <?php include("showtables.php"); ?>
+                </div>
+                <div style="display:flex;flex-direction:column">
+                    <br><input type="number" name="table-no" placeholder="Table-No" style="padding:10px;margin:40px auto;width:220px; height:30px;" min="1" max="<?php echo $number_of_tables; ?>"><br>
+                    <div class="dot not-avb"></div><span style="margin-top: -35px;margin-left:150px;">Not Available</span><br>
+                    <div class="dot"></div><span style="margin-top: -35px;margin-left:150px;">Available</span><br>
+                </div>
             </div>
-            <input type="submit" value="Confirm" name="confirm-book-btn">
+            <div class="btn-wrapper" style="display: inline-block;margin:auto 10px;">
+                <input type="reset" value="Cancel" name="cancel-book-btn" class="reservation-submit-btn cancel">
+                <input type="submit" value="Confirm" name="confirm-book-btn" class="reservation-submit-btn">
+            </div>
         </form>
     </div>
     <script>
@@ -62,17 +75,17 @@
             var meal_type = document.getElementById("time-period").value;
             console.log(meal_type);
             if (meal_type == "Breakfast") {
-                document.getElementById("breakfast-times").style.display = "block";
+                document.getElementById("breakfast-times").style.display = "inline-block";
                 document.getElementById("lunch-times").style.display = "none";
                 document.getElementById("dinner-times").style.display = "none";
             }
             if (meal_type == "Lunch") {
-                document.getElementById("lunch-times").style.display = "block";
+                document.getElementById("lunch-times").style.display = "inline-block";
                 document.getElementById("breakfast-times").style.display = "none";
                 document.getElementById("dinner-times").style.display = "none";
             }
             if (meal_type == "Dinner") {
-                document.getElementById("dinner-times").style.display = "block";
+                document.getElementById("dinner-times").style.display = "inline-block";
                 document.getElementById("lunch-times").style.display = "none";
                 document.getElementById("breakfast-times").style.display = "none";
             }
