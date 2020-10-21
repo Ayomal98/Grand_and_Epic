@@ -29,6 +29,7 @@ if (isset($_POST['Submit'])) {
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
             $_SESSION["First_Name"] = $row["First_Name"];
+            $_SESSION["User_Email"] = $row["Email"];
             header('Location:HomePage-login.php');
         }
     }

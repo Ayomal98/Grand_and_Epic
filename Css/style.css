@@ -1198,3 +1198,22 @@ form.staying-in-form > label {
   margin: 5px 20px;
   display: inline-block;
 }
+
+.upcoming-reservation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1.3em;
+  padding: 10px;
+  margin: 10px auto;
+  grid-column-gap: 1.4em;
+}
+.reservation-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border: 1px solid black;
+  width: 60vh;
+  height: 35vh;
+}

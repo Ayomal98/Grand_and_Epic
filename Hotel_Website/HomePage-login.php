@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['First_Name'];
+$email = $_SESSION['User_Email'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

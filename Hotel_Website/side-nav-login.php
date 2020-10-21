@@ -20,7 +20,7 @@
     <div class="side-nav" id="side-nav">
         <ul>
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br />
-            <li> <a href="#">Home<span class="fas fa-home"></span></a></li>
+            <li> <a href="HomePage-login.php">Home<span class="fas fa-home"></span></a></li>
             <li><a href="Hotel_Website/staying-in.php" class="staying-btn">Staying-In<span class="fas fa-hotel"></span>
                     <span class="fas fa-caret-down" id="toggle-btn" onclick="showStayingIn()"></span>
                 </a></li>
@@ -33,7 +33,7 @@
             <li><a href="Hotel_Website/meals.html">meals<span class="fas fa-hamburger"></span></a></li>
             <li><a href="#">Events<span class="fas fa-handshake"></span></a></li>
             <li><a href="#">Offers<span class="fas fa-credit-card"></span></a></li>
-            <li><a href="#">My Reservatioins<span class="fa fa-user"></span></a></li>
+            <li><a href="myreservations.php">My Reservatioins<span class="fa fa-user"></span></a></li>
         </ul>
     </div>
 </body>
