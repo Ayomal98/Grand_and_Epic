@@ -21,9 +21,8 @@ if (isset($_POST['confirm-book-btn'])) {
     $query = "INSERT INTO dinein_booking (Table_No,Customer_email,Customer_Name,Num_Guests,Meal_Period,Date,Time) VALUES ('" . $tableno . "','" . $emailaddress . "','" . $customername . "','" . $numguests . "','" . $mealperiod . "','" . $date . "','" . $timeperiod . "') ";
     $insertTablesQuery = "INSERT INTO tables (Table_No,Time,Date,isBooked) VALUES ('" . $tableno . "','" . $timeperiod . "','" . $date . "','" . $boolTrue . "')";
     mysqli_query($con, $insertTablesQuery);
-    mysqli_query($con, $query);
     if ($con->query($query) === TRUE) {
-        echo "New record created successfully";
+        header("location:HomePage-login.php");
     } else {
         echo "Error: " . $query . "<br>" . $con->error;
     }

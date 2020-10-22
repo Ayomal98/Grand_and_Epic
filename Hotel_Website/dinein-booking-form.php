@@ -20,7 +20,7 @@
                 <input type="email" name="customer-email" id="" placeholder="Email address" required>
                 <input type="number" name="number-of-guests" placeholder="No-Guests" min="0" max="10" step="1" style="width:110px;" required>
             </div>
-            <div class="dine-in-details" style="display:flex;align-items:center;">
+            <div class="dine-in-details-wrapper" style="display:flex;align-items:center;">
                 <div class="meal-container">
                     <label for="Meal-type">Meal Type</label>
                     <select name="Meal-Period" id="time-period" onchange="mealShow()">
