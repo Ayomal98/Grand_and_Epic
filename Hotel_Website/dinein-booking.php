@@ -1,13 +1,15 @@
 <?php include("../Templates/connection.php");
 $boolTrue = TRUE;
 $boolFalse = False;
+$timeperiod;
+$date;
 if (isset($_POST['confirm-book-btn'])) {
     $customername = mysqli_real_escape_String($con, $_POST['customer-name']);
     $emailaddress = mysqli_real_escape_string($con, $_POST['customer-email']);
     $numguests = mysqli_real_escape_string($con, $_POST['number-of-guests']);
     $mealperiod = mysqli_real_escape_string($con, $_POST['Meal-Period']);
     $tableno = mysqli_real_escape_string($con, $_POST['table-no']);
-    $timeperiod;
+
     if ($mealperiod == 'Breakfast') {
         $timeperiod = mysqli_real_escape_string($con, $_POST['breakfast-times']);
     }

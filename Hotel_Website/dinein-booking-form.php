@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dine-in Booking</title>
     <link rel="stylesheet" href="../Css/style.css">
+    <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="dine-in-booking-form-container">
-
+        <i class="fas fa-arrow-circle-left" onclick="history.back()"></i>
         <form action="dinein-booking.php" class="dine-in-form" method="post">
             <h2 style="font-size:40px;">Reservation for Dine-in</h2>
             <div class="customer-details">
@@ -49,7 +50,7 @@
                 </div>
 
                 <div class="date-container">
-                    <input type="date" name="Dine-in-date">
+                    <input type="date" name="Dine-in-date" min="" id="datefield">
                 </div>
             </div>
 
@@ -90,6 +91,21 @@
                 document.getElementById("breakfast-times").style.display = "none";
             }
         }
+    </script>
+    <script>
+        //--    for setting the current day as the minimum date for the time being --
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        today = yy + '-' + mm + '-' + dd;
+        document.getElementById("datefield").setAttribute("min", today);
     </script>
 </body>
 

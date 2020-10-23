@@ -1262,6 +1262,13 @@ form.staying-in-form > label {
   border-radius: 10px;
   margin-right: 10px;
 }
+
+.reservation-box span {
+  margin-left: -60px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
 .book-btn-container {
   display: inline-block;
 }
