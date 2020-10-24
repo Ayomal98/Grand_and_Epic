@@ -71,7 +71,7 @@ body {
 
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 5px;}
   .sidenav a {font-size: 18px;}
 }
 .top-right{
@@ -159,7 +159,6 @@ input[type=password]{
 	display: block;
 }
 
-
 textarea[name=Message]{
 
 	width: 80%;
@@ -167,7 +166,6 @@ textarea[name=Message]{
 	margin: 8px 0;
 	box-sizing: border-box;
 	font-size: 20px;
-
 	font-family: sans-serif;
 }
 
@@ -187,7 +185,17 @@ form[type=typeform]{
 	text-align: center;
 	cursor: pointer;
 }
-.button:hover {background-color: black;
+.button:hover {
+	background-color: black;
+}
+
+select {
+	width: 80%;
+	padding: 5px 30px;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+
 }
 
 

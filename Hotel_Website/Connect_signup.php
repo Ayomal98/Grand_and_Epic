@@ -9,4 +9,4 @@ if(isset($_POST['Submit'])){
     $result=mysqli_query($sql,$con);
 }
 
-?>
+?>    
