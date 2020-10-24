@@ -17,7 +17,7 @@ nav {
 
 a {
   text-decoration: none;
-  color: #f0f0f0;
+  color: #f4fffd;
 }
 ul {
   list-style-type: none;
@@ -146,6 +146,82 @@ h3 {
     background-repeat: no-repeat;
   }
 }
+.header-container-dinein {
+  background-image: url("../Images/pexels-chan-walrus-941861.jpg");
+  background-size: cover;
+  animation: slide-dinein 50s infinite;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+
+@keyframes slide-dinein {
+  25% {
+    background: url("../Images/pexels-kaboompics-com-6270.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../Images/pexels-jonathan-borba-2878741.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../Images/pexels-nadi-lindsay-2672886.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../Images/pexels-kaboompics-com-6270.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.header-container-userReservations {
+  background-image: url("../Images/pexels-chan-walrus-941861.jpg");
+  background-size: cover;
+  animation: slide-dinein 50s infinite;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+
+@keyframes slide-dinein {
+  25% {
+    background: url("../Images/pexels-kaboompics-com-6270.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../Images/pexels-jonathan-borba-2878741.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../Images/pexels-nadi-lindsay-2672886.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../Images/pexels-kaboompics-com-6270.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 .side-nav {
   height: 100%;
   width: 0;
@@ -209,9 +285,6 @@ h3 {
   transform: translateY(-40%);
   font-size: 22px;
   transition: transform 0.4s;
-}
-
-.side-nav ul li a:hover span {
 }
 
 .side-nav .btn-close {
@@ -314,9 +387,19 @@ h3 {
   margin-right: -10px;
 }
 
-.btn-logout {
-  right: 200px;
-  margin-right: 0px;
+#user-detail-container {
+  background-color: #f0f0f0;
+  position: absolute;
+  width: 160px;
+  height: 95px;
+  top: 100px;
+  right: 30px;
+  border-radius: 10px;
+  color: #303036;
+  font-weight: bolder;
+  padding: 5px;
+  border: none;
+  display: none;
 }
 
 .text-container {
@@ -405,7 +488,7 @@ h3 {
 
 .modal-content {
   width: 500px;
-  height: 370px;
+  height: 470px;
   background-color: white;
   border-radius: 4px;
   text-align: center;
@@ -415,7 +498,7 @@ h3 {
 
 .modal-content .signup {
   width: 500px;
-  height: 450px;
+  height: 550px;
 }
 
 .modal-content input.inputs {
@@ -458,7 +541,7 @@ h3 {
 
 .modal-content input.log-btn {
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
   padding: 7px;
   border-radius: 4px;
   border: none;
@@ -468,6 +551,22 @@ h3 {
   cursor: pointer;
 }
 .modal-content input.log-btn:hover {
+  transform: scale(1.2);
+  background-color: black;
+  color: #3498db;
+}
+.reservation-submit-btn {
+  display: inline-block;
+  margin: 5px 25px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.reservation-submit-btn:hover {
   transform: scale(1.2);
   background-color: black;
   color: #3498db;
@@ -484,6 +583,14 @@ h3 {
 
 .body-container {
   margin: 30px 10px;
+}
+
+.body-container.dinein {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 70px;
 }
 
 .slide-image {
@@ -901,7 +1008,7 @@ form.reservation-form {
   width: 110px;
 }
 
-.body-container .suite-rooms-wrapper button.book {
+button.book {
   color: #f0f0f0;
   background-color: goldenrod;
   border: none;
@@ -950,4 +1057,242 @@ form.reservation-form {
   height: 450px;
   background-position: center;
   background-size: cover;
+}
+
+.staying-in-booking-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.staying-in-form {
+  display: flex;
+  flex-direction: column;
+}
+form.staying-in-form > label {
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.dine-in-booking-form-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../Images/pexels-daria-shevtsova-3794739.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.dine-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 15px 40px;
+  width: 110vh;
+}
+.customer-details {
+  display: flex;
+  margin: 20px auto;
+}
+
+.customer-details input {
+  margin: 20px 20px;
+  padding: 10px;
+}
+
+.dine-in-details-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.meal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px 20px;
+}
+
+.meal-container label {
+  margin: 10px 10px;
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  left: 490px;
+}
+
+.time-period label {
+  margin: 10px auto;
+  font-size: 20px;
+  color: #000;
+}
+
+.meal-container select {
+  display: inline;
+  margin: 0px 10px;
+  width: 100px;
+  padding: 5px;
+}
+
+.meal-container #time-period {
+  margin: 20px 20px;
+}
+.table-container {
+  display: flex;
+  flex-direction: row;
+}
+.table-showing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1.3em;
+  padding: 10px;
+  margin: 10px auto;
+  grid-column-gap: 4em;
+}
+
+.dot {
+  height: 36px;
+  width: 36px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  text-align: center;
+  color: #f0f0f0;
+  margin: 10px auto;
+}
+.dot.not-avb {
+  background-color: grey;
+  color: black;
+}
+
+.time-period {
+  display: flex;
+  margin: 30px 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#breakfast-times {
+  display: none;
+  margin-left: 10px;
+}
+
+#lunch-times {
+  display: none;
+  margin-left: 10px;
+}
+
+#dinner-times {
+  display: none;
+  margin-left: 10px;
+}
+
+.open-close {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  margin: 20px 10px;
+}
+
+.open-close > div {
+  margin: auto 0px;
+  border-left: 1px solid black;
+  padding: 20px;
+}
+
+.img-dinein-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.img-dinein-container * {
+  background-position: center;
+  background-size: cover;
+  width: 45%;
+  height: 500px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.dine-in-details {
+  background-color: #b88b4a;
+  color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.dine-in-details * {
+  margin: 5px 20px;
+  display: inline-block;
+}
+
+.userBookings {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 1.3em;
+  padding: 10px;
+  margin: 10px auto;
+  grid-column-gap: 1.4em;
+}
+.reservation-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border: none;
+  width: 60vh;
+  height: 35vh;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.reservation-box span {
+  margin-left: -60px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.book-btn-container {
+  display: inline-block;
+}
+.book.update {
+  color: black;
+  background-color: goldenrod;
+  padding: 20px;
+  margin-top: 15px;
+  height: 10px;
+  width: 80px;
+  margin-left: -90px;
+  padding-top: 8px;
+  color: #e6e6e6;
+  cursor: pointer;
+}
+.book.delete {
+  color: black;
+  background-color: goldenrod;
+  padding: 20px;
+  margin-top: 15px;
+  height: 10px;
+  width: 80px;
+  margin-left: 20px;
+  padding-top: 8px;
+  color: #e6e6e6;
+  cursor: pointer;
 }

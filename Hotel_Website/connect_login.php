@@ -1,9 +1,10 @@
 <?php include("../Templates/connection.php");
 session_start();
 if (isset($_POST['Submit'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $usertype = $_POST['User-Type'];
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $usertype = mysqli_real_escape_string($con, $_POST['User-Type']);
+    $password_hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $query = '';
     if ($usertype == 'Employee') {
         $query = "SELECT First_Name,Email,Password,User_Role FROM employee WHERE Email='" . $email . "' AND Password='" . $password . "'";
@@ -15,7 +16,7 @@ if (isset($_POST['Submit'])) {
                 header('Location:../Admin/AdminDashboard.php');
             } elseif ($row["User_Role"] == "Hotel Manager") {
                 $_SESSION['username'] = $row['First_Name'];
-                header('Location:../Hotel_Manager/HotelManagerDashboard.php');
+                header('Location:../Hotel_Manager/HotelManagerDashboard.html');
                 $_SESSION["First_Name"] = $row["First_Name"];
             } elseif ($row["User_Role"] == "Hotel Supervisor") {
                 $_SESSION['username'] = $row['First_Name'];
@@ -23,15 +24,13 @@ if (isset($_POST['Submit'])) {
             }
         }
     } else {
-        $query = "SELECT Email,Password FROM customer WHERE Email='" . $email . "' AND Password='" . $password . "'";
+        $query = "SELECT First_Name,Email,Password FROM customer WHERE Email='" . $email . "' AND Password='" . $password . "'";
         $result = mysqli_query($con, $query);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
-            echo $row["First_Name"];
             $_SESSION["First_Name"] = $row["First_Name"];
-            echo $_SESSION["First Name"];
-            header('Location: HomePage.php');
-        } else {
+            $_SESSION["User_Email"] = $row["Email"];
+            header('Location:HomePage-login.php');
         }
     }
 }
