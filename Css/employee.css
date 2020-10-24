@@ -159,22 +159,13 @@ input[type=password]{
 	display: block;
 }
 
-<<<<<<< HEAD
-textarea[name=Message]{
-=======
-
 textarea[name=Message]{
 
->>>>>>> 5b0067c904093ef8e9089c76bf23171c0245be7d
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
 	box-sizing: border-box;
 	font-size: 20px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 5b0067c904093ef8e9089c76bf23171c0245be7d
 	font-family: sans-serif;
 }
 
@@ -194,7 +185,17 @@ form[type=typeform]{
 	text-align: center;
 	cursor: pointer;
 }
-.button:hover {background-color: black;
+.button:hover {
+	background-color: black;
+}
+
+select {
+	width: 80%;
+	padding: 5px 30px;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+
 }
 
 
