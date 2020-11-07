@@ -21,17 +21,17 @@
         <ul>
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br />
             <li> <a href="HomePage-login.php">Home<span class="fas fa-home"></span></a></li>
-            <li><a href="Hotel_Website/staying-in.php" class="staying-btn">Staying-In<span class="fas fa-hotel"></span>
+            <li><a href="staying-in.php" class="staying-btn">Staying-In<span class="fas fa-hotel"></span>
                     <span class="fas fa-caret-down" id="toggle-btn" onclick="showStayingIn()"></span>
                 </a></li>
             <ul class="stayingin-show" id="stayingin-show">
-                <li><a href="Hotel_Website/Suite-Rooms.php">Suites</a></li>
-                <li><a href="Hotel_Website/Panaromic-Rooms.php">Panaromic Rooms</a></li>
-                <li><a href="Hotel_Website/Superior-Rooms.php">Superior Rooms</a></li>
+                <li><a href="Suite-Rooms.php">Suites</a></li>
+                <li><a href="Panaromic-Rooms.php">Panaromic Rooms</a></li>
+                <li><a href="Superior-Rooms.php">Superior Rooms</a></li>
             </ul>
             <li><a href="dinein-login.php">Dining<span class="fas fa-utensils"></span></a></li>
             <li><a href="Hotel_Website/meals.html">meals<span class="fas fa-hamburger"></span></a></li>
-            <li><a href="#">Events<span class="fas fa-handshake"></span></a></li>
+            <li><a href="events-login.php">Events<span class="fas fa-handshake"></span></a></li>
             <li><a href="#">Offers<span class="fas fa-credit-card"></span></a></li>
             <li><a href="myreservations.php">My Reservatioins<span class="fa fa-user"></span></a></li>
         </ul>

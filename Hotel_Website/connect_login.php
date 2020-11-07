@@ -4,7 +4,6 @@ if (isset($_POST['Submit'])) {
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $usertype = mysqli_real_escape_string($con, $_POST['User-Type']);
-    $password_hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $query = '';
     if ($usertype == 'Employee') {
         $query = "SELECT First_Name,Email,Password,User_Role FROM employee WHERE Email='" . $email . "' AND Password='" . $password . "'";

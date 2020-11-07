@@ -35,6 +35,10 @@ h3 {
   text-align: center;
   font-size: 36px;
 }
+img {
+  max-width: 100%;
+  max-width: 100%;
+}
 
 .page-wrapper {
   min-height: 100vh;
@@ -217,6 +221,44 @@ h3 {
   }
   100% {
     background: url("../Images/pexels-kaboompics-com-6270.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.header-container-events {
+  background-image: url("../Images/pexels-ricardo-esquivel-1802253.jpg");
+  background-size: cover;
+  animation: slide-events 50s infinite;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+
+@keyframes slide-events {
+  25% {
+    background: url("../Images/pexels-cottonbro-3171837.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: url("../Images/pexels-rene-asmussen-1405528.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: url("../Images/pexels-jacob-morch-426976.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../Images/pexels-ricardo-esquivel-1802253.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1295,4 +1337,42 @@ form.staying-in-form > label {
   padding-top: 8px;
   color: #e6e6e6;
   cursor: pointer;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.wedding-wrapper {
+  display: flex;
+  flex-direction: row;
+  background: #b88b4a;
+  color: #fff;
+  height: 65vh;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.party-wrapper {
+  display: flex;
+  flex-direction: row;
+  background: #b88b4a;
+  color: #fff;
+  height: 65vh;
+  width: 90%;
+  margin: 20px auto;
+}
+.card-img-wedding {
+  background-position: center;
+  background-size: cover;
+  width: 48%;
+  background-repeat: no-repeat;
+}
+
+.card-img-party {
+  background-position: center;
+  background-size: cover;
+  width: 48%;
+  background-repeat: no-repeat;
 }
