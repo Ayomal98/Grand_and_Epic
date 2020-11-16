@@ -14,10 +14,11 @@ $email = $_SESSION['User_Email'];
     <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #394359 ;">
-    <div class="header-container-userReservations">
+<body>
+    <div class="header-container-userReservations" id="header-container">
         <?php include("sticky-nav.php"); ?>
         <?php include("side-nav-login.php"); ?>
+
 
         <span class="fa fa-user" style="position:absolute;top:20px;right:40px;font-size:60px;color:white"><span class="far fa-caret-square-down" style="font-size:20px;margin-left:10px;" onclick="funcUserDetails()"></span></span>
         <!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
@@ -28,24 +29,33 @@ $email = $_SESSION['User_Email'];
             <a href="logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:5px;margin-left:85px;padding:5px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
 
         </div>
+        <div class="text-container">
+            <span class="text1">Grand &</span>
+            <span class="text2">Epic
+            </span>
+        </div>
     </div>
-    <div class="upcoming-reservation">
-        <h2 style="color:white">Upcoming Reservations</h2>
-        <?php
-        $query = "SELECT Table_No,Date,Time,Num_Guests FROM dinein_booking WHERE Customer_Email='" . $email . "'";
-        $result = mysqli_query($con, $query);
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $table_no = $row['Table_No'];
-                $date = $row['Date'];
-                $time = $row['Time'];
-                $numguests = $row['Num_Guests'];
-                echo "<div class=\"reservation-box\"><span>$table_no</span><span>$date</span><span>$time</span><span>$numguests</span></div>";
-            }
-        }
+    <div class="body-container">
+        <h3>Upcoming Reservations</h2>
+            <div class="userBookings upcoming" id="user-bookings">
+                <?php
+                $query = "SELECT Table_No,Date,Time,Num_Guests FROM dinein_booking WHERE Customer_Email='" . $email . "'";
+                $result = mysqli_query($con, $query);
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $table_no = $row['Table_No'];
+                        $date = $row['Date'];
+                        $time = $row['Time'];
+                        $numguests = $row['Num_Guests'];
+                        echo "<div class=\"reservation-box\"><span>Table No: $table_no</span><span>Date: $date</span><span>Time: $time</span><span>Number Of Guests: $numguests</span><div class=\"book-btn-container\"><button class=\"book update\">Update</button><button class=\"book delete\"><a href=\"delete-dinein.php\">Delete</a></button></div></div>;";
+                    }
+                }
 
-        ?>
+                ?>
+            </div>
     </div>
+    </div>
+    <?php include("footer-footer.php"); ?>
     <script src="../Javascript/script.js"></script>
     <script src="../Javascript/sticky-nav.js"></script>
     <script>

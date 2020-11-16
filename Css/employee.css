@@ -11,7 +11,7 @@ body {
 
 /* Fixed sidenav, full height */
 .sidenav {
-  height: 35%;
+  height: 36%;
   width: 240px;
   position: relative;
   z-index: 1;
@@ -24,7 +24,7 @@ body {
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
-  padding: 7px 8px 6px 16px;
+  padding: 6px 8px 6px 24px;
   text-decoration: none;
   font-size: 18px;
   color: #818181;
@@ -121,24 +121,6 @@ input[type=text]{
 	color: black;
 	display: block;
 }
-input[type=int]{
-	width: 80%;
-	padding: 5px 29px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: black;
-	display: block;
-}
-input[type=float]{
-	width: 80%;
-	padding: 5px 29px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: black;
-	display: block;
-}
 input[type=email]{
 	width: 80%;
 	padding: 5px 29px;
@@ -177,15 +159,6 @@ input[type=password]{
 	display: block;
 }
 
-input[type=file]{
-	width: 87%;
-	padding: 5px 30px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: blue;
-}
-
 textarea[name=Message]{
 	width: 80%;
 	padding: 5px 30px;
@@ -204,12 +177,33 @@ form[type=typeform]{
 	color: black;
 }
 
-select{
+input[type=int]{
 	width: 80%;
-	padding: 5px 30px;
+	padding: 5px 29px;
+	margin: 8px 0;
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
+	display: block;
+}
+
+input[type=float]{
+	width: 80%;
+	padding: 5px 29px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+	display: block;
+}
+
+input[type=file]{
+	width: 87%;
+	padding: 5px 30px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: blue;
 }
 
 .button{
@@ -219,7 +213,20 @@ select{
 	text-align: center;
 	cursor: pointer;
 }
-.button:hover {background-color: black;
+.button:hover {
+	background-color: black;
+}
+
+select {
+	width: 80%;
+	padding: 5px 30px;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+}
+
+.retrieve{
+	Display:flex;
 }
 
 #user-detail-container{
@@ -235,6 +242,17 @@ select{
 	padding: 10px;
 	border: none;
 	display: none;
+}
+
+.dtablescroll{
+	font-size:18px;
+	width: 52%;
+	top:249px;
+	position:relative;
+	border:1px solid white;
+	max-height:70%;
+	overflow:auto;
+	float:left;
 }
 
 .dbtablescroll{

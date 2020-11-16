@@ -37,7 +37,7 @@ $email = $_SESSION['User_Email'];
     </div>
     <div class="body-container dinein">
         <h3>Dining</h3>
-        <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;margin:20px 30px;">High on the 6th floor, offering panoramic views from its full length glass windows, the Kanchana Restaurant is our main dining area. Tempting spreads are laid at breakfast, lunch and dinner plying you with an array of cuisine from traditional Sri Lankan to international fare. Come nightfall, a flute plays sweet melodies, the stars glimmer, and a sumptuous barbecue sizzle.</p>
+        <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;margin:20px 30px;">High on the 6th floor, offering panoramic views from its full length glass windows, the Araliya Restaurant is our main dining area. Tempting spreads are laid at breakfast, lunch and dinner plying you with an array of cuisine from traditional Sri Lankan to international fare. Come nightfall, a flute plays sweet melodies, the stars glimmer, and a sumptuous barbecue sizzle.</p>
         <h3 style="color:#ffb515;">ARALIYA RESTAURANT</h3>
         <div class="open-close">
             <div style="border-left:none;background-color:#B88B4A;color:#F4FFFD;margin:auto 0px;">Opening Hours &emsp;<i class="fa fa-clock-o" aria-hidden="true"></i>

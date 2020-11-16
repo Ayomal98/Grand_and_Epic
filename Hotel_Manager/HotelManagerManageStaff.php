@@ -51,18 +51,18 @@
 	  }
 	  });
 	}
-	</script>
-	<form  action="StaffAdd.php" method="POST">
+    </script>
+
 	<fieldset style = " position:absolute; top:280px; width: 75%; left:160px">
 		<legend style = "color:white; font-size: 20px">Manage Staff</legend>
-        <table style = "color:white; font-size: 20px; width: 100%;"></table>
+        <table style = "color:white; font-size: 20px; width: 100%;">
             <tr>
-				<form>
+				<form action="StaffAdd.php" method="POST">
                     
-                            <table style = "color:white; font-size: 20px; width:88%;">
+                        <table style = "color:white; font-size: 20px; width:88%;">
                                 <tr>
-                                        <td align="left" style="display: none;left:0px;top: 0px;" id="id-1" >Employee ID:</td>
-                                        <td align="center" style="display: none;left:0px;top:0px;" id="input-id-1" ><input type="text" name="empID" size="20"class="inputs" required></td>
+                                    <td align="left" style="display: none;left:0px;top: 0px;" id="id-1" >Employee ID:</td>
+                                    <td align="center" style="display: none;left:0px;top:0px;" id="input-id-1" ><input type="text" name="empID" size="20"class="inputs" required></td>
                                     <td align="right"><input type="button" class="button" value="SEARCH ID" onclick="displayID()"  style="position: absolute;top:40px;right:10vh" ></td>
                                 </tr>
                                 <tr>
@@ -89,28 +89,22 @@
                                     <td align="left">Contact No:</td>
                                     <td align="center"><input type="tel" name="empContact" size="20"class="inputs" required></td>
                                 </tr>
-                            </table>
-            
+                        </table>   
+
+                </form>
+            </tr>
+        </table>
                             <table style = "color:white; font-size: 20px; width:81%;">
                                 <tr>
                                     <td align="right">
-                                        <input type="button" class="button" value="  ADD  ">
-                                        <input type="button" class="button" value="UPDATE">
-                                        <input type="button" class="button" value="DELETE">
+                                        <input type="submit" class="button" value="  ADD  " name="ADD">
+                                        <input type="button" class="button" value="UPDATE" name="UPDATE">
+                                        <input type="button" class="button" value="DELETE" name="DELETE">
                                     </td>
                                 </tr>
                             </table>
                  
-                    </form>
-                </tr>
-                <tr>	
-                </tr>
-                <tr>	
-                </tr>
-		</table>		
-		
 	</fieldset>
-    </form>
 
 	<table style ="width:100%;position:absolute">
         <tr>
