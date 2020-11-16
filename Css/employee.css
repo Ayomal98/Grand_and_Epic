@@ -12,7 +12,7 @@ body {
 /* Fixed sidenav, full height */
 .sidenav {
   height: 35%;
-  width: 230px;
+  width: 240px;
   position: relative;
   z-index: 1;
   top: -250px;
@@ -24,7 +24,7 @@ body {
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
+  padding: 7px 8px 6px 16px;
   text-decoration: none;
   font-size: 18px;
   color: #818181;
@@ -121,6 +121,24 @@ input[type=text]{
 	color: black;
 	display: block;
 }
+input[type=int]{
+	width: 80%;
+	padding: 5px 29px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+	display: block;
+}
+input[type=float]{
+	width: 80%;
+	padding: 5px 29px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+	display: block;
+}
 input[type=email]{
 	width: 80%;
 	padding: 5px 29px;
@@ -159,22 +177,21 @@ input[type=password]{
 	display: block;
 }
 
-<<<<<<< HEAD
-textarea[name=Message]{
-=======
+input[type=file]{
+	width: 87%;
+	padding: 5px 30px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: blue;
+}
 
 textarea[name=Message]{
-
->>>>>>> 5b0067c904093ef8e9089c76bf23171c0245be7d
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
 	box-sizing: border-box;
 	font-size: 20px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 5b0067c904093ef8e9089c76bf23171c0245be7d
 	font-family: sans-serif;
 }
 
@@ -182,6 +199,14 @@ form[type=typeform]{
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+}
+
+select{
+	width: 80%;
+	padding: 5px 30px;
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
@@ -195,6 +220,32 @@ form[type=typeform]{
 	cursor: pointer;
 }
 .button:hover {background-color: black;
+}
+
+#user-detail-container{
+	background-color: #f0f0f0;
+	position: absolute;
+	width: 150px;
+	height: 90px;
+	top: 100px;
+	right: 30px;
+	border-radius: 10px;
+	color: black;
+	font-weight: bolder;
+	padding: 10px;
+	border: none;
+	display: none;
+}
+
+.dbtablescroll{
+	font-size: 18px; 
+	width:50%; 
+	top:300px; 
+	position:relative; 
+	border: 1px solid white;
+	max-height: 100%;
+	overflow: auto;
+	float: left;
 }
 
 
