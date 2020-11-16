@@ -23,7 +23,7 @@
                         <option value="Employee">Staff</option>
                     </select>
                 </div>
-                <input type="text" name="email" placeholder="Email" class="inputs" required>
+                <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" class="inputs" required>
                 <input type="password" name="password" placeholder="Password" class="inputs" required>
                 <a href=""><span style="font-weight: bold; color:black;">Forgot your password ?</span></a><br />
                 <input type="submit" value="Submit" name="Submit" class="log-btn submit">

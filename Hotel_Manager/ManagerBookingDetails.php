@@ -1,33 +1,48 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+$email = $_SESSION['User_Email'];
+?>
 <html>
 	<head>
 	<link rel="stylesheet" href="../Css/employee.css">
 		<title>
 		Manager Booking Details
-		</title>
+        </title>
+        <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 	</head>	
 	<body bgcolor = "black">
 
 	<center>
-	<img src="../Images/Logo.png" width="20%">
+        <img src="../Images/Logo.png" width="20%">
+    
+        <span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
+		<!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
+		<div id="user-detail-container">
+			<span class="fa fa-window-close" style="margin-left:130px;" onclick="funcCloseUserDetails()"></span>
+			<p style="margin-top: 2px; color:black"><?php echo "Logged in as $username"; ?></P>
+			<hr style="color:teal">
+			<a href="../Hotel_Website/logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:-7px;margin-left:85px;padding:0px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
+        </div>
+        
 	</center>
 		<div class="sidenav">	
-			<button class="dropdown-btn">Booking Details&#128317;
-				<i class="fa fa-caret-down"></i>
+			<button class="dropdown-btn">Booking Details
+            <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-				<a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
-				<a href="HotelManagerManageStaff.html"><font size = "4 px">Manage Staff</font></a>
-                <a href="HotelManagerPromotions.html"><font size = "4 px">Promotions</font></a>
-                <a href="HotelManagerCustomerFeedback.html"><font size = "4 px">Customer Feedback</font></a>
-                <a href="HotelManagerManageRoom.html"><font size = "4 px">Manage Room</font></a>
-				<a href="HotelManagerEarlyCheckOuts.html"><font size = "4 px">Early Check-Outs</font></a>
+				<a href="HotelManagerDashboard.php"><font size = "4 px">Dashboard</font></a>
+				<a href="HotelManagerManageStaff.php"><font size = "4 px">Manage Staff</font></a>
+                <a href="HotelManagerPromotions.php"><font size = "4 px">Promotions</font></a>
+                <a href="HotelManagerCustomerFeedback.php"><font size = "4 px">Customer Feedback</font></a>
+                <a href="HotelManagerManageRoom.php"><font size = "4 px">Manage Room</font></a>
+				<a href="HotelManagerEarlyCheckOuts.php"><font size = "4 px">Early Check-Outs</font></a>
 				</div>
 		</div>
 		<div class = "top-right">
 		<table width = "100%">
 		<tr>
-		<td>
-			<p style = "font-family :Lato; font-size:20px; color :white;">Logged in as</p>		
+		<td>	
 		</td>
 		<td>
 			<img src = "../Images/ayomal.png" height = "40%" >
@@ -95,10 +110,16 @@
                         <p style = "font-family :Lato; font-size:15px; color :white;">Superior</p>  
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
                         <p style = "font-family :Lato; font-size:15px; color :white;">16.30 PM</p>  
@@ -115,10 +136,16 @@
                         <p style = "font-family :Lato; font-size:15px; color :white;">Panoramic</p>  
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
                         <p style = "font-family :Lato; font-size:15px; color :white;">10.00 AM</p>  
@@ -135,10 +162,16 @@
                         <p style = "font-family :Lato; font-size:15px; color :white;">Suite</p>  
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
                         <p style = "font-family :Lato; font-size:15px; color :white;">8.00 AM</p>  
@@ -155,10 +188,16 @@
                             <p style = "font-family :Lato; font-size:15px; color :white;">Panoramic</p>  
                         </td>
                         <td style ="border: 1px solid white;">
-                            <p style = "font-family :Lato; font-size:15px; color :white;">0</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                         </td>
                         <td style ="border: 1px solid white;">
-                            <p style = "font-family :Lato; font-size:15px; color :white;">0</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                         </td>
                         <td style ="border: 1px solid white;">
                             <p style = "font-family :Lato; font-size:15px; color :white;">Null</p>  
@@ -217,7 +256,10 @@
                         <p style = "font-family :Lato; font-size:15px; color :white;">Lunch</p>  
                        </td>
                        <td style ="border: 1px solid white;">
-                        <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                        <p style = "font-family :Lato; font-size:20px; color :white;">
+                            <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                            <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                        </p>		
                        </td>
                        <td style ="border: 1px solid white;">
                         <p style = "font-family :Lato; font-size:15px; color :white;">12.30 PM - 16.30 PM </p>  
@@ -231,7 +273,10 @@
                          <p style = "font-family :Lato; font-size:15px; color :white;">Dinner</p>  
                         </td>
                         <td style ="border: 1px solid white;">
-                         <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                         </td>
                         <td style ="border: 1px solid white;">
                          <p style = "font-family :Lato; font-size:15px; color :white;">18.30 PM - 21.30 PM </p>  
@@ -245,7 +290,10 @@
                          <p style = "font-family :Lato; font-size:15px; color :white;">Breakfast</p>  
                         </td>
                         <td style ="border: 1px solid white;">
-                         <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                         </td>
                         <td style ="border: 1px solid white;">
                          <p style = "font-family :Lato; font-size:15px; color :white;">9.00 AM - 10.00 AM </p>  
@@ -259,7 +307,10 @@
                          <p style = "font-family :Lato; font-size:15px; color :white;">Lunch</p>  
                         </td>
                         <td style ="border: 1px solid white;">
-                         <p style = "font-family :Lato; font-size:15px; color :white;">0</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                         </td>
                         <td style ="border: 1px solid white;">
                          <p style = "font-family :Lato; font-size:15px; color :white;">12.30 PM - 16.30 PM </p>  
@@ -313,7 +364,10 @@
                             <p style = "font-family :Lato; font-size:15px; color :white;">Full Day</p>  
                            </td>
                            <td style ="border: 1px solid white;">
-                            <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                            <p style = "font-family :Lato; font-size:20px; color :white;">
+                                <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                            </p>		
                            </td>
                            <td style ="border: 1px solid white;">
                             <p style = "font-family :Lato; font-size:15px; color :white;">9.00 AM - 10.00 PM</p>  
@@ -327,7 +381,10 @@
                              <p style = "font-family :Lato; font-size:15px; color :white;">Half Day</p>  
                             </td>
                             <td style ="border: 1px solid white;">
-                             <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                                <p style = "font-family :Lato; font-size:20px; color :white;">
+                                    <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                    <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                                </p>		
                             </td>
                             <td style ="border: 1px solid white;">
                              <p style = "font-family :Lato; font-size:15px; color :white;">11.00 AM - 18.30PM </p>  
@@ -341,7 +398,10 @@
                              <p style = "font-family :Lato; font-size:15px; color :white;">Half Day</p>  
                             </td>
                             <td style ="border: 1px solid white;">
-                             <p style = "font-family :Lato; font-size:15px; color :white;">1</p>  
+                                <p style = "font-family :Lato; font-size:20px; color :white;">
+                                    <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                    <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                                </p>		
                             </td>
                             <td style ="border: 1px solid white;">
                              <p style = "font-family :Lato; font-size:15px; color :white;">9.00 AM - 1 PM </p>  
@@ -355,7 +415,10 @@
                              <p style = "font-family :Lato; font-size:15px; color :white;">Lunch</p>  
                             </td>
                             <td style ="border: 1px solid white;">
-                             <p style = "font-family :Lato; font-size:15px; color :white;">0</p>  
+                                <p style = "font-family :Lato; font-size:20px; color :white;">
+                                    <input type="radio" name="rating2" value="yes" checked style="margin-left:65px;">Yes
+                                    <input type="radio" name="rating2" value="no" disabled style="margin-left:65px;">No
+                                </p>		
                             </td>
                             <td style ="border: 1px solid white;">
                              <p style = "font-family :Lato; font-size:15px; color :white;">Null </p>  
@@ -373,5 +436,14 @@
             </td>
         </tr>
         </table>
+        <script>
+		function funcUserDetails() {
+			document.getElementById('user-detail-container').style.display = "block";
+		}
+
+		function funcCloseUserDetails() {
+			document.getElementById('user-detail-container').style.display = "none";
+		}
+	</script>
 	</body>
 </html>

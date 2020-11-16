@@ -15,14 +15,24 @@ $email = $_SESSION['User_Email'];
 
 	<center>
 	<img src="../Images/Logo.png" width="20%">
+	<span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
+		<!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
+		<div id="user-detail-container">
+			<span class="fa fa-window-close" style="margin-left:130px;" onclick="funcCloseUserDetails()"></span>
+			<p style="margin-top: 2px; color:black"><?php echo "Logged in as $username"; ?></P>
+			<hr style="color:teal">
+			<a href="../Hotel_Website/logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:-7px;margin-left:85px;padding:0px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
+		</div>
 	</center>
 		<div class="sidenav">	
-			<button class="dropdown-btn">Request a Leave &#128317;
+			<button class="dropdown-btn">Request a Leave
+			<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-                    <a href="ReceptionistDashboard.html">Dashboard</a>
-                    <a href="ReceptionistRoomDetails.html">Room Details</a>
-                    <a href="ReceptionistReservations.html">Reservations</a>
+                    <a href="ReceptionistDashboard.php">Dashboard</a>
+                    <a href="ReceptionistRoomDetails.php">Room Details</a>
+					<a href="ReceptionistReservations.php">Reservations</a>
+					<a href="ReceptionistAcceptPayments.php">Accept Payments</a>
 				</div>
 		</div>
 		<div class = "top-right">

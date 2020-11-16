@@ -26,12 +26,14 @@ $email = $_SESSION['User_Email'];
 		</div>
 	</center>
 		<div class="sidenav">	
-			<button class="dropdown-btn">Dashboard &#128317;
+			<button class="dropdown-btn">Dashboard
+			<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-				<a href="ReceptionistReservations.html">Reservations</a>
-				<a href="ReceptionistRoomDetails.html">Room Details</a>
-				<a href="ReceptionistRequestLeave.html">Request a Leave</a>
+				<a href="ReceptionistReservations.php">Reservations</a>
+				<a href="ReceptionistRoomDetails.php">Room Details</a>
+				<a href="ReceptionistRequestLeave.php">Request a Leave</a>
+				<a href="ReceptionistAcceptPayments.php">Accept Payments</a>
 				</div>
 		</div>
 		<div class = "top-right">
@@ -137,13 +139,10 @@ $email = $_SESSION['User_Email'];
 	
 	<div class ="bottom-left">
 		<div class="display">
-		  <img class="mySlides" src="../Images/img17.jpg">
-		  <img class="mySlides" src="../Images/img18.jpg">
-		  <img class="mySlides" src="../Images/img19.jpg">
-		  <img class="mySlides" src="../Images/img20.jpg">
+		  
 
-		  <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
-		  <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+		  <!--<button class="display-left" onclick="plusDivs(-1)">&#10094;</button>-->
+		  <!--<button class="display-right" onclick="plusDivs(1)">&#10095;</button>-->
 	</div>
 
 	<script>
