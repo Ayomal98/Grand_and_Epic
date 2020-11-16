@@ -1,3 +1,8 @@
+<?php
+session_start();
+$username = $_SESSION['username'];
+$email = $_SESSION['User_Email'];
+?>
 <html>
 
 <head>
@@ -5,34 +10,44 @@
     <title>
         Hotel Manager Manage Staff
     </title>
+    <script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body bgcolor="black">
 
     <center>
         <img src="../Images/Logo.png" width="20%">
+
+        <span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
+        <!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
+        <div id="user-detail-container">
+            <span class="fa fa-window-close" style="margin-left:130px;" onclick="funcCloseUserDetails()"></span>
+            <p style="margin-top: 2px; color:black"><?php echo "Logged in as $username"; ?></P>
+            <hr style="color:teal">
+            <a href="../Hotel_Website/logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:-7px;margin-left:85px;padding:0px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
+        </div>
+
     </center>
     <div class="sidenav">
         <button class="dropdown-btn">Manage Staff &#128317;
-            <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="HotelManagerDashboard.html">
+            <a href="HotelManagerDashboard.php">
                 <font size="4 px">Dashboard</font>
             </a>
-            <a href="ManagerBookingDetails.html">
+            <a href="ManagerBookingDetails.php">
                 <font size="4 px">Booking Details</font>
             </a>
-            <a href="HotelManagerPromotions.html">
+            <a href="HotelManagerPromotions.php">
                 <font size="4 px">Promotions</font>
             </a>
-            <a href="HotelManagerCustomerFeedback.html">
+            <a href="HotelManagerCustomerFeedback.php">
                 <font size="4 px">Customer Feedback</font>
             </a>
-            <a href="HotelManagerManageRoom.html">
+            <a href="HotelManagerManageRoom.php">
                 <font size="4 px">Manage Room</font>
             </a>
-            <a href="HotelManagerEarlyCheckOuts.html">
+            <a href="HotelManagerEarlyCheckOuts.php">
                 <font size="4 px">Early Check-Outs</font>
             </a>
         </div>
@@ -41,7 +56,6 @@
         <table width="100%">
             <tr>
                 <td>
-                    <p style="font-family :Lato; font-size:20px; color :white;">Logged in as</p>
                 </td>
                 <td>
                     <img src="../Images/ayomal.png" height="40%">
@@ -74,14 +88,16 @@
             <form action="StaffAdd.php" method="POST" id="manager_form"></form>
             <tr>
                 <table style="color:white; font-size: 20px; width:88%;">
-                    <tr>
-                        <td align="left" style="display: none;left:0px;top: 0px;" id="id-1">Employee ID:</td>
-                        <td align="center" style="display: none;left:0px;top:0px;" id="input-id-1"><input type="text" name="empID" size="20" class="inputs" required></td>
-                        <td align="right"><input type="button" class="button" value="SEARCH ID" onclick="displayID()" style="position: absolute;top:40px;right:10vh" form="manager_form"></td>
-                    </tr>
+
                     <tr>
                         <td align="left">Employee Type:</td>
-                        <td align="center"><input type="text" name="empType" size="20" placeholder="Supervisor/Receptionist/Employee" class="inputs" form="manager_form" required> </td>
+                        <td align="center">
+                            <select name="empType" id="" class="inputs" form="manager_form" required>
+                                <option value="Employee">Employee</option>
+                                <option value="Receptionist">Receptionist</option>
+                                <option value="Supervisor">Supervisor</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td align="left">First Name:</td>
@@ -105,26 +121,87 @@
                     </tr>
                 </table>
 
-
             </tr>
         </table>
         <table style="color:white; font-size: 20px; width:81%;">
             <tr>
                 <td align="right">
-                    <input type="submit" class="button" value="  ADD  " name="ADD" form="manager_form">
-                    <input type="button" class="button" value="UPDATE" name="UPDATE">
-                    <input type="button" class="button" value="DELETE" name="DELETE">
+                    <input type="submit" class="button" value="  ADD Employee " name="ADD" form="manager_form">
                 </td>
             </tr>
         </table>
 
     </fieldset>
 
+    <form action="" method="POST">
+        <fieldset style=" position:absolute; top:750px; width: 75%; left:160px">
+            <legend style="color:white; font-size: 20px">Update and Delete Employees</legend>
+            <input type="text" name="Employee_ID" placeholder="Enter id to Search" />
+            <input type="submit" name="search" value="Search by ID" class="button">
+        </fieldset>
+    </form>
+
+    <!-- Search -->
+    <?php
+    include("../Templates/connection.php");
+    if (isset($_POST['search'])) {
+        $Employee_ID = $_POST['Employee_ID'];
+
+        $query = "SELECT * FROM employee where Employee_ID='$Employee_ID' ";
+        $query_run = mysqli_query($con, $query);
+
+        while ($row = mysqli_fetch_array($query_run)) {
+    ?>
+            <form action="" method="POST">
+                <fieldset style=" position:absolute; top:900px; width: 75%; left:160px">
+                    <table align="center" style="color:white; font-size: 22px; width:88%;">
+                        <tr>
+                            <td width="300 px" style="display: none;"> First Name:</td>
+                            <td width="300 px"><input type="text" style="display:none" name="Employee_ID" value="<?php echo $row['Employee_ID']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td width="300 px">First Name:</td>
+                            <td width="300 px"><input type="text" name="First_Name" value="<?php echo $row['First_Name']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td><input type="text" name="Last_Name" value="<?php echo $row['Last_Name']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="Email" value="<?php echo $row['Email']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Contact No:</td>
+                            <td><input type="tel" name="Contact_No" value="<?php echo $row['Contact_No']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td>User Role:</td>
+                            <td><input type="text" name="User_Role" value="<?php echo $row['User_Role']; ?>" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="position:relative;left:180px">
+                                <input type="submit" class="button" name="update" value="Update Employee"></a>
+                                <input type="submit" class="button" name="delete" value="Delete Employee"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+    <?php
+        }
+    }
+    ?>
+
+    </table>
+
+
     <table style="width:100%;position:absolute">
         <tr>
             <th rowspan="5">
                 <form>
-                    <fieldset style=" position:absolute; top:600px; width: 75%; left:160px">
+                    <fieldset style=" position:absolute; top:800px; width: 75%; left:160px">
                         <legend style="color:white; font-size: 20px">Respond to Leave Requests of Employees</legend>
                         <table style="color:white; font-size: 20px; width:88%;">
                             <tr>
@@ -166,7 +243,7 @@
         </tr>
     </table>
 
-    <table style="border: 1px solid white;width:100%; position:absolute; top:825px">
+    <table style="border: 1px solid white;width:100%; position:absolute; top:1800px">
         <tr>
             <td></td>
             <td align="center">
@@ -241,17 +318,52 @@
         </tr>
     </table>
     <script>
-        function displayID() {
-            document.getElementById('id-1').style.display = 'inline-block';
-            document.getElementById('id-1').setAttribute("style", "position:absolute");
-            document.getElementById('id-1').setAttribute("style", "top:60px");
-            document.getElementById('id-1').setAttribute("style", "left:150px");
-            document.getElementById('input-id-1').style.display = 'inline-block';
-            document.getElementById('input-id-1').setAttribute("style", "position:absolute");
-            document.getElementById('input-id-1').setAttribute("style", "top:60px");
-            document.getElementById('input-id-1').setAttribute("style", "left:150px");
+        function funcUserDetails() {
+            document.getElementById('user-detail-container').style.display = "block";
+        }
+
+        function funcCloseUserDetails() {
+            document.getElementById('user-detail-container').style.display = "none";
         }
     </script>
 </body>
 
 </html>
+
+<!-- Update -->
+<?php
+if (isset($_POST['update'])) {
+    $First_Name = $_POST['First_Name'];
+    $Last_Name = $_POST['Last_Name'];
+    $Email = $_POST['Email'];
+    $Contact_No = $_POST['Contact_No'];
+    $User_Role = $_POST['User_Role'];
+    $query = "UPDATE employee SET First_Name='$First_Name',Last_Name='$Last_Name',Email='$Email',Contact_No='$Contact_No',User_Role='$User_Role' where Employee_ID='$_POST[Employee_ID]'";
+    $query_run = mysqli_query($con, $query);
+
+    if ($query_run) {
+        echo "<script>
+                alert('Employee Has been updated');
+                window.location.href='HotelManagerManageStaff.php';
+                </script>";
+    } else {
+        echo '<script> alert("Data Not Updated") </script>';
+    }
+}
+?>
+<!-- delete -->
+<?php
+if (isset($_POST['delete'])) {
+    $query = "DELETE FROM employee where Employee_ID='$_POST[Employee_ID]'";
+    $query_run = mysqli_query($con, $query);
+
+    if ($query_run) {
+        echo "<script>
+                alert('Employee Has been Deleted');
+                window.location.href='HotelManagerManageStaff.php';
+                </script>";
+    } else {
+        echo '<script> alert("Data Not Updated") </script>';
+    }
+}
+?>

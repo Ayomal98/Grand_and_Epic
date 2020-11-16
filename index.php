@@ -54,23 +54,29 @@
                 <span class="fas fa-user" id="customer-icon"></span>
                 <div class="box-heading">Loyalty Offer</div>
                 <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-                <box class="link">Read more</box>
+                <a href="">
+                    <box class="link">Read more</box>
+                </a>
             </div>
             <div class="box">
                 <span class="fab fa-cc-visa" id="creditcard-icon"></span>
                 <div class="box-heading">Credit-Card Offer</div>
                 <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-                <box class="link">Read more</box>
+                <a href="">
+                    <box class="link">Read more</box>
+                </a>
             </div>
             <div class="box">
                 <span class="fas fa-hourglass-end" id="lastmin-icon"></span>
                 <div class="box-heading">Last-Miniute Offer</div>
                 <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-                <box class="link">Read more</box>
+                <a href="">
+                    <box class="link">Read more</box>
+                </a>
             </div>
         </div>
     </div>
-    <?php include("Hotel_Website/footer-footer.php"); ?>
+    <?php include("Hotel_Website/footer-index.php"); ?>
     <script src="Javascript/script.js"></script>
     <script src="Javascript/sticky-nav.js"></script>
 </body>

@@ -1,10 +1,11 @@
 body {
-  background-image: url('src/bg1.jpg');
+  background-image: url('../Images/bg1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
   font-family:sans-serif;
 }
+bg1.jpg
 
 .breakfast{
 	position:absolute;

@@ -1,10 +1,28 @@
-<!-- This page conatins about dine in-booking form -->
+<!-- This page is for update form of the dinein-booking -->
 <?php include("time-inclusion.php");
-?>
-<?php
-session_start();
-$username = $_SESSION['First_Name'];
-$email = $_SESSION['User_Email'];
+include("../Templates/connection.php");
+$dinein_id;
+$table_no;
+$customer_email;
+$customer_name;
+$num_guests;
+$date;
+$time;
+$mealPeriod;
+if (isset($_GET['dinein_id'])) {
+    $dinein_id = $_GET['dinein_id'];
+}
+$sql = "SELECT * FROM dinein_booking WHERE Dinein_ID='" . $dinein_id . "'";
+$sql_run = mysqli_query($con, $sql);
+while ($row = mysqli_fetch_assoc($sql_run)) {
+    $table_no = $row['Table_No'];
+    $customer_email = $row['Customer_email'];
+    $customer_name = $row['Customer_Name'];
+    $num_guests = $row['Num_Guests'];
+    $mealPeriod = $row['Meal_Period'];
+    $date = $row['Date'];
+    $time = $row['Time'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,21 +104,28 @@ $email = $_SESSION['User_Email'];
 <body>
 
     <div class="dine-in-booking-form-container">
-        <form action="dinein-booking.php" class="dine-in-form" method="post">
-            <h2 style="font-size:40px;">Reservation for Dine-in</h2>
+        <form action="update-delete-dinein.php" class="dine-in-form" method="post">
+            <input type="text" name="dinein_id" value="<?php echo $dinein_id ?>" style="display:none;">
+            <h2 style="font-size:40px;"> Update Reservation for Dine-in</h2>
             <div class="customer-details">
-                <input type="text" style="width:28%" name="customer-name" id="" placeholder="Customer Name" required>
-                <input type="text" style="width:45%" name="customer-email" id="" placeholder="Email address" required>
-                <input type="number" name="number-of-guests" placeholder="No-Guests" min="0" max="10" step="1" style="width:110px;" required>
+                <input type="text" style="width:28%" name="customer-name" id="" placeholder="Customer Name" value="<?php echo $customer_name ?>" required>
+                <input type="text" style="width:45%" name="customer-email" id="" placeholder="Email address" value="<?php echo $customer_email ?> " required>
+                <input type="number" name="number-of-guests" placeholder="No-Guests" min="0" max="10" step="1" value="<?php echo $num_guests ?>" style="width:110px;" required>
             </div>
             <div class="dine-in-details-wrapper" style="display:flex;align-items:center;">
                 <div class="meal-container">
                     <label for="Meal-type" id="meal-label-id" style="position: absolute;top:210px;left:30%">Meal Type</label>
 
+                    <label for="selected-meal-type" style="font-family:roboto;font-weight: bold;position:absolute;top:155px;left:330px">Selected Meal Type &nbsp; : </label><span style="font-weight: bolder;position:absolute;top:160px;left:530px;font-size:28px;">&nbsp;<?php echo $mealPeriod ?></span>
+                    <label for="selected-meal-type" style="font-family:roboto;font-weight: bold;position:absolute;top:155px;left:700px">Selected Time Period &nbsp; : </label><span style="font-weight: bolder;position:absolute;top:160px;left:930px;font-size:28px;">&nbsp;<?php echo $time ?></span>
+
                     <select name="Meal-Period" id="time-period" onchange="mealShow()">
-                        <option value="Breakfast">Breakfast</option>
+
+                        <option value="Breakfast" selected>Breakfast</option>
                         <option value="Lunch">Lunch</option>
                         <option value="Dinner">Dinner</option>
+
+
                     </select>
 
                 </div>
@@ -128,7 +153,7 @@ $email = $_SESSION['User_Email'];
                 </div>
 
                 <div class="date-container">
-                    <input type="date" name="Dine-in-date" min="" id="datefield">
+                    <input type="date" name="Dine-in-date" min="" id="datefield" value="<?php echo $date ?>">
                 </div>
             </div>
 
@@ -138,14 +163,15 @@ $email = $_SESSION['User_Email'];
                 </div>
                 <input type="button" value="Check-Availability" name="check-availability" class="check-availability-btn"><i class="fas fa-check" style="position:absolute;top:66%;right:42%;"></i></input>
                 <div style="display:flex;flex-direction:column">
-                    <br><input type="number" name="table-no" placeholder="Table-No" style="position:absolute;top:75%;right:32%;width:180px; height:40px;padding:10px" min="1" max="<?php echo $number_of_tables; ?>"><br>
+
+                    <br><input type="number" name="table-no" placeholder="Table-No" style="position:absolute;top:75%;right:32%;width:180px; height:40px;padding:10px" min="1" max="<?php echo $number_of_tables; ?>" value="<?php echo $table_no ?>"><br>
                     <div class="dot not-avb"></div><span style="margin-top: -35px;margin-left:150px;">Not Available</span><br>
                     <div class="dot"></div><span style="margin-top: -35px;margin-left:150px;">Available</span><br>
                 </div>
             </div>
             <div class="btn-wrapper" style="display: inline-block;margin:auto 10px;">
                 <input type="reset" value="Cancel" name="cancel-book-btn" class="reservation-submit-btn cancel">
-                <input type="submit" value="Confirm" name="confirm-book-btn" class="reservation-submit-btn">
+                <input type="submit" value="Update" name="Update" class="reservation-submit-btn">
             </div>
         </form>
     </div>

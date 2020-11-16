@@ -16,9 +16,12 @@ $email = $_SESSION['User_Email'];
 
 <body>
     <div class="header-container-dinein" id="header-container">
+        <!--to include the sticky nav bar -->
         <?php include("sticky-nav.php"); ?>
 
+        <!--to include the side nav bar -->
         <?php include("side-nav-login.php"); ?>
+
 
         <span class="fa fa-user" style="position:absolute;top:20px;right:40px;font-size:60px;color:white"><span class="far fa-caret-square-down" style="font-size:20px;margin-left:10px;" onclick="funcUserDetails()"></span></span>
         <!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
