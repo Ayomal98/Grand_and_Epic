@@ -31,12 +31,21 @@ $email = $_SESSION['User_Email'];
 				
 				</button>
 				<div class="dropdown-container">
+<<<<<<< HEAD:Hotel_Manager/HotelManagerDashboard.php
 				<a href="HotelManagerManageStaff.php"><font size = "4 px">Manage Staff</font></a>
 				<a href="ManagerBookingDetails.php"><font size = "4 px">Booking Details</font></a>
         		<a href="HotelManagerPromotions.php"><font size = "4 px">Promotions</font></a>
 				<a href="HotelManagerCustomerFeedback.php"><font size = "4 px">Customer Feedback</font></a>
 				<a href="HotelManagerManageRoom.php"><font size = "4 px">Manage Room</font></a>
 				<a href="HotelManagerEarlyCheckOuts.php"><font size = "4 px">Early Check-Outs</font></a>
+=======
+				<a href="HotelManagerManageStaff.html"><font size = "4 px">Manage Staff</font></a>
+				<a href="ManagerBookingDetails.html"><font size = "4 px">Booking Details</font></a>
+        <a href="HotelManagerPromotions.html"><font size = "4 px">Promotions</font></a>
+				<a href="HotelManagerCustomerFeedback.html"><font size = "4 px">Customer Feedback</font></a>
+				<a href="HotelManagerManageRoom.html"><font size = "4 px">Manage Room</font></a>
+				<a href="HotelManagerEarlyCheckOuts.html"><font size = "4 px">Early Check-Outs</fon
+>>>>>>> 93cba57f3033efbbf4850db342ebeed992886703:Hotel_Manager/HotelManagerDashboard.html
 				</div>
 		</div>
 		<div class = "top-right">
