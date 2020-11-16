@@ -23,6 +23,10 @@ if (isset($_POST['Submit'])) {
                 $_SESSION['username'] = $row['First_Name'];
                 $_SESSION["User_Email"] = $row["Email"];
                 header('Location:../Hotel_Supervisor/SupervisorDashboard.php');
+            } elseif ($row["User_Role"] == "Employee") {
+                $_SESSION['username'] = $row['First_Name'];
+                $_SESSION["User_Email"] = $row["Email"];
+                header('Location:../Employees/EmployeeDashboard.php');
             }
             elseif ($row["User_Role"] == "Receptionist") {
                 $_SESSION['username'] = $row['First_Name'];

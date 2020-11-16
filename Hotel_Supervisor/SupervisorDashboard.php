@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+$email = $_SESSION['User_Email'];
 ?>
 <html>
 
@@ -9,28 +10,37 @@ $username = $_SESSION['username'];
 	<title>
 		Supervisor Dashboard
 	</title>
+	<script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body bgcolor="black">
 	<center>
 		<img src="../Images/Logo.png" width="20%">
+		
+		<span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
+		<!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
+		<div id="user-detail-container">
+			<span class="fa fa-window-close" style="margin-left:130px;" onclick="funcCloseUserDetails()"></span>
+			<p style="margin-top: 2px; color:black"><?php echo "Logged in as $username"; ?></P>
+			<hr style="color:teal">
+			<a href="../Hotel_Website/logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:-7px;margin-left:85px;padding:0px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
+		</div>
 	</center>
 	<div class="sidenav">
-		<button class="dropdown-btn">Dashboard &#128317;
+		<button class="dropdown-btn">Dashboard
 			<i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-container">
 
-			<a href="SupervisorAssignEmployeeTasks.html">Assign Employee tasks</a>
-			<a href="SupervisorLeaveRequest.html">Request a Leave</a>
+			<a href="SupervisorAssignEmployeeTasks.php">Assign Employee tasks</a>
+			<a href="SupervisorManageMeals.php">Manage Meals</a>
+			<a href="SupervisorManageSetMenus.php">Manage Set Menu</a>
+			<a href="SupervisorLeaveRequest.php">Request a Leave</a>
 		</div>
 	</div>
 	<div class="top-right">
 		<table width="100%">
 			<tr>
-				<td>
-					<p style="font-family :Lato; font-size:20px; color :white;">Logged in as <?php echo $username; ?></p>
-				</td>
 				<td>
 					<img src="../Images/ayomal.png" height="40%">
 				</td>
@@ -73,10 +83,10 @@ $username = $_SESSION['username'];
 				<p style="font-family :Lato; font-size:20px; color :white;">Assign Employee Tasks</p>
 			</th>
 			<th style="border: 1px solid white;">
-				<p style="font-family :Lato; font-size:20px; color :white;">View Booking Details</p>
+				<p style="font-family :Lato; font-size:20px; color :white;">Manage Meals</p>
 			</th>
 			<th style="border: 1px solid white;">
-				<p style="font-family :Lato; font-size:20px; color :white;">View Leave Requests</p>
+				<p style="font-family :Lato; font-size:20px; color :white;">Manage Set Menu</p>
 			</th>
 			<th style="border: 1px solid white;">
 				<p style="font-family :Lato; font-size:20px; color :white;">Request a Leave</p>
@@ -88,7 +98,7 @@ $username = $_SESSION['username'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/roomService.png" height="%">
+							<img src="../Images/roomService.png" height="75%">
 						</td>
 						<td align="center">
 							<p style="color: white; font-size: 20px;">15</p>
@@ -118,35 +128,20 @@ $username = $_SESSION['username'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/Calendar.png" height="50%">
+							<img src="../Images/breakfast.png" height="50%">
 						</td>
-						<td rowspan="2" align="center">
-							<img src="../Images/Duty.png" height="75%">
-						</td>
-					</tr>
-					<tr></tr>
-					<tr>
-						<td align="center">
-							<img src="../Images/hotel.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">12</p>
+						<td rowspan="3" align="center">
+							<img src="../Images/meal.png" height="60%">
 						</td>
 					</tr>
 					<tr>
 						<td align="center">
-							<img src="../Images/cutlery.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">16</p>
+							<img src="../Images/lunch.png" height="40%">
 						</td>
 					</tr>
 					<tr>
 						<td align="center">
-							<img src="../Images/tie.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">2</p>
+							<img src="../Images/dinner.png" height="50%">
 						</td>
 					</tr>
 				</table>
@@ -157,10 +152,10 @@ $username = $_SESSION['username'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/Calendar.png" height="50%">
+							<img src="../Images/setmenuSmall.png" height="50%">
 						</td>
 						<td align="center">
-							<img src="../Images/BIgCal.png" height="10%">
+							<img src="../Images/setMenuBig.png" height="100%">
 						</td>
 					</tr>
 				</table>
@@ -244,6 +239,16 @@ $username = $_SESSION['username'];
 			</fieldset>
 		</form>
 	</div>
+
+	<script>
+		function funcUserDetails() {
+			document.getElementById('user-detail-container').style.display = "block";
+		}
+
+		function funcCloseUserDetails() {
+			document.getElementById('user-detail-container').style.display = "none";
+		}
+	</script>
 </body>
 
 </html>
