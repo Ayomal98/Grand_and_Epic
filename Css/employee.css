@@ -160,7 +160,6 @@ input[type=password]{
 }
 
 textarea[name=Message]{
-
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
@@ -176,6 +175,35 @@ form[type=typeform]{
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
+}
+
+input[type=int]{
+	width: 80%;
+	padding: 5px 29px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+	display: block;
+}
+
+input[type=float]{
+	width: 80%;
+	padding: 5px 29px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: black;
+	display: block;
+}
+
+input[type=file]{
+	width: 87%;
+	padding: 5px 30px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	font-size: 20px;
+	color: blue;
 }
 
 .button{
@@ -195,13 +223,13 @@ select {
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
-
 }
+
 .retrieve{
 	Display:flex;
-
 }
-#user-detail-container {
+
+#user-detail-container{
 	background-color: #f0f0f0;
 	position: absolute;
 	width: 150px;
@@ -226,3 +254,16 @@ select {
 	overflow:auto;
 	float:left;
 }
+
+.dbtablescroll{
+	font-size: 18px; 
+	width:50%; 
+	top:300px; 
+	position:relative; 
+	border: 1px solid white;
+	max-height: 100%;
+	overflow: auto;
+	float: left;
+}
+
+
