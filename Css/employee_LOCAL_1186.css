@@ -3,8 +3,8 @@ body {
 
 /* Fixed sidenav, full height */
 .sidenav {
-  height: 36%;
-  width: 240px;
+  height: 35%;
+  width: 230px;
   position: relative;
   z-index: 1;
   top: -250px;
@@ -15,14 +15,9 @@ body {
 }
 
 /* Style the sidenav links and the dropdown button */
-<<<<<<< HEAD
 .sidenav a,
 .dropdown-btn {
   padding: 6px 8px 6px 16px;
-=======
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 24px;
->>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
   text-decoration: none;
   font-size: 18px;
   color: #818181;
@@ -240,6 +235,7 @@ input[type=password]{
 }
 
 textarea[name=Message]{
+
 	width: 80%;
 	padding: 5px 30px;
 	margin: 8px 0;
@@ -255,35 +251,6 @@ form[type=typeform]{
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
-}
-
-input[type=int]{
-	width: 80%;
-	padding: 5px 29px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: black;
-	display: block;
-}
-
-input[type=float]{
-	width: 80%;
-	padding: 5px 29px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: black;
-	display: block;
-}
-
-input[type=file]{
-	width: 87%;
-	padding: 5px 30px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	font-size: 20px;
-	color: blue;
 }
 
 .button{
@@ -303,51 +270,8 @@ select {
 	box-sizing: border-box;
 	font-size: 20px;
 	color: black;
-}
 
-.retrieve{
-	Display:flex;
-}
-
-#user-detail-container{
-	background-color: #f0f0f0;
-	position: absolute;
-	width: 150px;
-	height: 90px;
-	top: 100px;
-	right: 30px;
-	border-radius: 10px;
-	color: black;
-	font-weight: bolder;
-	padding: 10px;
-	border: none;
-	display: none;
-}
-
-.dtablescroll{
-	font-size:18px;
-	width: 52%;
-	top:249px;
-	position:relative;
-	border:1px solid white;
-	max-height:70%;
-	overflow:auto;
-	float:left;
-}
-
-<<<<<<< HEAD
 >>>>>>> 93cba57f3033efbbf4850db342ebeed992886703
-=======
-.dbtablescroll{
-	font-size: 18px; 
-	width:50%; 
-	top:300px; 
-	position:relative; 
-	border: 1px solid white;
-	max-height: 100%;
-	overflow: auto;
-	float: left;
->>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 }
 
 input[type="password"] {

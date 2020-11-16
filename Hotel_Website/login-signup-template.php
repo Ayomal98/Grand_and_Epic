@@ -24,8 +24,12 @@
                         <option value="Employee">Staff</option>
                     </select>
                 </div>
+<<<<<<< HEAD
                 <input type="text" name="email" placeholder="Email" class="inputs" id="login-customer-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 <span id="valid-invalidity"></span>
+=======
+                <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" class="inputs" required>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
                 <input type="password" name="password" placeholder="Password" class="inputs" required>
                 <a href=""><span style="font-weight: bold; color:black;">Forgot your password ?</span></a><br />
                 <input type="submit" value="Submit" name="Submit" class="log-btn submit">

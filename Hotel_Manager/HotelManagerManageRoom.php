@@ -27,8 +27,13 @@ $email = $_SESSION['User_Email'];
 
 	</center>
 		<div class="sidenav">	
+<<<<<<< HEAD
 			<button class="dropdown-btn">Manage Rooms &#128317;
 				
+=======
+			<button class="dropdown-btn">Manage Rooms 
+            <i class="fa fa-caret-down"></i>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 				</button>
 				<div class="dropdown-container">
                 <a href="HotelManagerDashboard.php"><font size = "4 px">Dashboard</font></a>
@@ -103,6 +108,7 @@ $email = $_SESSION['User_Email'];
 				<td align="center">
 					<textarea name="Message" rows="5" cols="0" placeholder="Description" style="font-size: 20px;"></textarea>
 				</tr>
+<<<<<<< HEAD
 				<tr>
                     <td align="center">
                         <input type="button" class="button" value="UPDATE ROOM">
@@ -111,6 +117,8 @@ $email = $_SESSION['User_Email'];
                         <input type="button" class="button" value="DELETE ROOM">
                     </td>
 				</tr>
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 			</table>
 			
 		</td>
@@ -123,6 +131,7 @@ $email = $_SESSION['User_Email'];
 				<td align="center">
 					<textarea name="Message" rows="5" cols="20" placeholder="Description" style="font-size: 20px;"></textarea>
 				</tr>
+<<<<<<< HEAD
 				<tr>
                     <td align="center">
                         <input type="button" class="button" value="UPDATE ROOM">
@@ -131,6 +140,8 @@ $email = $_SESSION['User_Email'];
                         <input type="button" class="button" value="DELETE ROOM">
                     </td>
 				</tr>
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 			</table>
         </td>
         <td style ="border: 1px solid white;" >
@@ -142,6 +153,7 @@ $email = $_SESSION['User_Email'];
 				<td align="center">
 					<textarea name="Message" rows="5" cols="20" placeholder="Description" style="font-size: 20px;"></textarea>
 				</tr>
+<<<<<<< HEAD
 				<tr>
                     <td align="center">
                         <input type="button" class="button" value="UPDATE ROOM">
@@ -150,6 +162,8 @@ $email = $_SESSION['User_Email'];
                         <input type="button" class="button" value="DELETE ROOM">
                     </td>
 				</tr>
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 			</table>
         </td>
         </tr>
@@ -216,7 +230,11 @@ $email = $_SESSION['User_Email'];
                     <table style = "color:white; font-size: 20px; width:81%;">
                         <tr>
                             <td align="right">
+<<<<<<< HEAD
                                 <input type="button" class="button" value="UPDATE ROOM TYPE">
+=======
+                                <input type="button" class="button" value="INSERT ROOM TYPE">
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
                                 <input type="button" class="button" value="SEND TO ADMIN">
                             </td>
                          </tr> 
@@ -226,6 +244,105 @@ $email = $_SESSION['User_Email'];
         </td>
     </tr>
     </table>
+<<<<<<< HEAD
+=======
+	<form action="" method="POST">
+        <fieldset style=" position:absolute; top:1500px; width: 75%; left:160px">
+            <legend style="color:white; font-size: 20px">Update and Delete Room Types</legend>
+            <input type="text" name="Employee_ID" placeholder="Enter id to Search" />
+            <input type="submit" name="search" value="Search by ID" class="button">
+        </fieldset>
+    </form>
+
+    <!-- Search -->
+   
+            <form action="" method="POST">
+                <fieldset style=" position:absolute; top:1700px; width: 75%; left:160px">
+                    <table align="center" style="color:white; font-size: 22px; width:75%;">
+					<tr>
+                            <td>Room Type:</td>
+                            <td>
+								<select id="types" name="User_Role" class="inputs">
+								    <option value="-"
+										
+										?>	
+									-</option>
+
+                                    <option value="Superior Room"
+										
+									>Superior Room</option>
+
+									<option value="Panoramic Room"
+										
+									>Panoramic Room</option>
+
+									<option value="Suite Room"
+										
+									>Suite Room</option>
+
+								</select>
+							</td>
+                        </tr>
+                        <tr>
+                            <td align="left">No: of Rooms:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Price Estimated:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td align="left"><u><font size ="5px">Room Details</font></u></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Room View:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">No of Guests:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Bed Type:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">No of Beds:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Bathroom:</td>
+                            <td align="left"><textarea name="Message" rows="1" cols="25" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Amenities:</td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="List down here the suggested amenities" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Description:</td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Add images & the description here" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Other:</td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Special Notes" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="position:relative;left:180px">
+                                <input type="submit" class="button" name="update" value="Update Room Type"></a>
+                                <input type="submit" class="button" name="delete" value="Delete Room Type"></a>
+                             
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+    <?php
+    
+    ?>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
     <script>
 		function funcUserDetails() {
 			document.getElementById('user-detail-container').style.display = "block";

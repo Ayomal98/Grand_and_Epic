@@ -16,6 +16,10 @@ $email = $_SESSION['User_Email'];
 <body bgcolor="black">
 	<center>
 		<img src="../Images/Logo.png" width="20%">
+<<<<<<< HEAD
+=======
+		
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 		<span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
 		<!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
 		<div id="user-detail-container">
@@ -26,10 +30,11 @@ $email = $_SESSION['User_Email'];
 		</div>
 	</center>
 	<div class="sidenav">
-		<button class="dropdown-btn">Dashboard &#128317;
+		<button class="dropdown-btn">Dashboard
 			<i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-container">
+<<<<<<< HEAD
 			<a href="SupervisorDashboard.php">
 				<font size="4 px">Dashboard</font>
 			</a>
@@ -42,14 +47,24 @@ $email = $_SESSION['User_Email'];
 			<a href="SupervisorLeaveRequest.php">
 				<font size="4 px">Request a Leave</font>
 			</a>
+=======
+
+			<a href="SupervisorAssignEmployeeTasks.php">Assign Employee tasks</a>
+			<a href="SupervisorManageMeals.php">Manage Meals</a>
+			<a href="SupervisorManageSetMenus.php">Manage Set Menu</a>
+			<a href="SupervisorLeaveRequest.php">Request a Leave</a>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 		</div>
 	</div>
 	<div class="top-right">
 		<table width="100%">
 			<tr>
 				<td>
+<<<<<<< HEAD
 				</td>
 				<td>
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 					<img src="../Images/ayomal.png" height="40%">
 				</td>
 			</tr>
@@ -91,10 +106,10 @@ $email = $_SESSION['User_Email'];
 				<p style="font-family :Lato; font-size:20px; color :white;">Assign Employee Tasks</p>
 			</th>
 			<th style="border: 1px solid white;">
-				<p style="font-family :Lato; font-size:20px; color :white;">View Booking Details</p>
+				<p style="font-family :Lato; font-size:20px; color :white;">Manage Meals</p>
 			</th>
 			<th style="border: 1px solid white;">
-				<p style="font-family :Lato; font-size:20px; color :white;">View Leave Requests</p>
+				<p style="font-family :Lato; font-size:20px; color :white;">Manage Set Menu</p>
 			</th>
 			<th style="border: 1px solid white;">
 				<p style="font-family :Lato; font-size:20px; color :white;">Request a Leave</p>
@@ -106,7 +121,7 @@ $email = $_SESSION['User_Email'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/roomService.png" height="%">
+							<img src="../Images/roomService.png" height="75%">
 						</td>
 						<td align="center">
 							<p style="color: white; font-size: 20px;">15</p>
@@ -136,35 +151,20 @@ $email = $_SESSION['User_Email'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/Calendar.png" height="50%">
+							<img src="../Images/breakfast.png" height="50%">
 						</td>
-						<td rowspan="2" align="center">
-							<img src="../Images/Duty.png" height="75%">
-						</td>
-					</tr>
-					<tr></tr>
-					<tr>
-						<td align="center">
-							<img src="../Images/hotel.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">12</p>
+						<td rowspan="3" align="center">
+							<img src="../Images/meal.png" height="60%">
 						</td>
 					</tr>
 					<tr>
 						<td align="center">
-							<img src="../Images/cutlery.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">16</p>
+							<img src="../Images/lunch.png" height="40%">
 						</td>
 					</tr>
 					<tr>
 						<td align="center">
-							<img src="../Images/tie.png" height="50%">
-						</td>
-						<td align="center">
-							<p style="color: white; font-size: 20px;">2</p>
+							<img src="../Images/dinner.png" height="50%">
 						</td>
 					</tr>
 				</table>
@@ -175,10 +175,10 @@ $email = $_SESSION['User_Email'];
 				<table width="100%">
 					<tr>
 						<td align="center">
-							<img src="../Images/Calendar.png" height="50%">
+							<img src="../Images/setmenuSmall.png" height="50%">
 						</td>
 						<td align="center">
-							<img src="../Images/BIgCal.png" height="10%">
+							<img src="../Images/setMenuBig.png" height="100%">
 						</td>
 					</tr>
 				</table>
@@ -262,6 +262,10 @@ $email = $_SESSION['User_Email'];
 			</fieldset>
 		</form>
 	</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 	<script>
 		function funcUserDetails() {
 			document.getElementById('user-detail-container').style.display = "block";

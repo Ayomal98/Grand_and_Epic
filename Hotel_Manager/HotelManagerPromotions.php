@@ -25,17 +25,25 @@ $email = $_SESSION['User_Email'];
         </div>
 	</center>
 		<div class="sidenav">	
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
 			<button class="dropdown-btn">Promotions &#128317;
 				
 				</button>
 				<div class="dropdown-container">
 <<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+=======
+			<button class="dropdown-btn">Promotions 
+			<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-container">
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
                 <a href="HotelManagerDashboard.php"><font size = "4 px">Dashboard</font></a>
 				<a href="HotelManagerManageStaff.php"><font size = "4 px">Manage Staff</font></a>
 				<a href="ManagerBookingDetails.php"><font size = "4 px">Booking Details</font></a>
 				<a href="HotelManagerCustomerFeedback.php"><font size = "4 px">Customer Feedback</font></a>
 				<a href="HotelManagerManageRoom.php"><font size = "4 px">Manage Room</font></a>
 				<a href="HotelManagerEarlyCheckOuts.php"><font size = "4 px">Early Check-Outs</font></a>
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
 =======
                 <a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
 				<a href="HotelManagerManageStaff.html"><font size = "4 px">Manage Staff</font></a>
@@ -44,6 +52,8 @@ $email = $_SESSION['User_Email'];
 				<a href="HotelManagerManageRoom.html"><font size = "4 px">Manage Room</font></a>
 				<a href="HotelManagerEarlyCheckOuts.html"><font size = "4 px">Early Check-Outs</font></a>
 >>>>>>> 93cba57f3033efbbf4850db342ebeed992886703:Hotel_Manager/HotelManagerPromotions.html
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
 				</div>
 		</div>
 		<div class = "top-right">
@@ -110,14 +120,6 @@ $email = $_SESSION['User_Email'];
 				<td align="center">
 					<textarea name="Message" rows="5" cols="0" placeholder="Terms & Conditions" style="font-size: 20px;"></textarea>
 				</tr>
-				<tr>
-                    <td align="center">
-                        <input type="button" class="button" value="UPDATE PROMOTION">
-                    </td>
-                    <td align="center">
-                        <input type="button" class="button" value="DELETE PROMOTION">
-                    </td>
-				</tr>
 			</table>
 			
 		</td>
@@ -130,14 +132,6 @@ $email = $_SESSION['User_Email'];
 				<td align="center">
 					<textarea name="Message" rows="5" cols="20" placeholder="Terms & Conditions" style="font-size: 20px;"></textarea>
 				</tr>
-				<tr>
-                    <td align="center">
-                        <input type="button" class="button" value="UPDATE PROMOTION">
-                    </td>
-                    <td align="center">
-                        <input type="button" class="button" value="DELETE PROMOTION">
-                    </td>
-				</tr>
 			</table>
         </td>
         <td style ="border: 1px solid white;" >
@@ -148,14 +142,6 @@ $email = $_SESSION['User_Email'];
 				</td>
 				<td align="center">
 					<textarea name="Message" rows="5" cols="20" placeholder="Terms & Conditions" style="font-size: 20px;"></textarea>
-				</tr>
-				<tr>
-                    <td align="center">
-                        <input type="button" class="button" value="UPDATE PROMOTION">
-                    </td>
-                    <td align="center">
-                        <input type="button" class="button" value="DELETE PROMOTION">
-                    </td>
 				</tr>
 			</table>
         </td>
@@ -184,7 +170,7 @@ $email = $_SESSION['User_Email'];
                         </tr>
                         <tr>
                             <td align="left">Constraints and Policies</td>
-                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Cosntarints" style="font-size: 20px;"></textarea></td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Constarints" style="font-size: 20px;"></textarea></td>
                         </tr>
                         <tr>
                         </tr>
@@ -221,6 +207,68 @@ $email = $_SESSION['User_Email'];
 			</td>
 		</tr>
 	</table>
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+=======
+	<form action="" method="POST">
+        <fieldset style=" position:absolute; top:1300px; width: 75%; left:160px">
+            <legend style="color:white; font-size: 20px">Update and Delete Promotions</legend>
+            <input type="text" name="Employee_ID" placeholder="Enter id to Search" />
+            <input type="submit" name="search" value="Search by ID" class="button">
+        </fieldset>
+    </form>
+
+    <!-- Search -->
+   
+            <form action="" method="POST">
+                <fieldset style=" position:absolute; top:1450px; width: 75%; left:160px">
+                    <table align="center" style="color:white; font-size: 22px; width:75%;">
+					<tr>
+                            <td>Promotion Type:</td>
+                            <td>
+								<select id="types" name="PromotionType" class="inputs">
+								    <option value="-"
+										
+										?>	
+									-</option>
+
+                                    <option value="Loylaty Promotion"
+										
+									>Loylaty Promotion</option>
+
+									<option value="Credit Card Promotion"
+										
+									>Credit Card Promotion</option>
+
+									<option value="Last Minute Promotion"
+										
+									>Last Minute Promotion"</option>
+
+								</select>
+							</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Context of Promotions:</td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Context" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Constraints and Policies</td>
+                            <td align="left"><textarea name="Message" rows="3" cols="25" placeholder="Constarints" style="font-size: 20px;"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="position:relative;left:180px">
+                                <input type="submit" class="button" name="update" value="Update Promotion Type"></a>
+                                <input type="submit" class="button" name="delete" value="Delete Promotion Type"></a>
+                             
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+    <?php
+    
+    ?>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
 	<script>
 		function funcUserDetails() {
 			document.getElementById('user-detail-container').style.display = "block";
