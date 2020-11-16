@@ -1,12 +1,4 @@
-
 body {
-	font-family: "Lato", sans-serif;
-	position: relative;  
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-
 }
 
 /* Fixed sidenav, full height */
@@ -23,8 +15,9 @@ body {
 }
 
 /* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 24px;
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 18px;
   color: #818181;
@@ -38,7 +31,8 @@ body {
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover,
+.dropdown-btn:hover {
   color: #f1f1f1;
 }
 
@@ -71,6 +65,87 @@ body {
 
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
+<<<<<<< HEAD
+  .sidenav {
+    padding-top: 5px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.top-right {
+  position: absolute;
+  top: 0px;
+  right: 6px;
+}
+.mySlides {
+  display: none;
+  width: 800px;
+  position: absolute;
+  left: 15px;
+  top: 700px;
+}
+
+.display-left {
+  position: absolute;
+  left: 15px;
+  top: 850px;
+  height: 80px;
+  width: 20px;
+  opacity: 0.7;
+}
+
+.display-right {
+  position: absolute;
+  left: 795px;
+  top: 850px;
+  height: 80px;
+  width: 20px;
+  opacity: 0.7;
+}
+.bottom-right {
+  position: absolute;
+  top: 700px;
+  right: 15px;
+  height: 200px;
+  width: 650px;
+}
+input[type="text"] {
+  width: 80%;
+  padding: 5px 29px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  display: block;
+}
+input[type="email"] {
+  width: 80%;
+  padding: 5px 29px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  display: block;
+}
+input[type="date"] {
+  width: 80%;
+  padding: 5px 26px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  display: block;
+  color: black;
+}
+input[type="tel"] {
+  width: 80%;
+  padding: 5px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  display: block;
+=======
   .sidenav {padding-top: 5px;}
   .sidenav a {font-size: 18px;}
 }
@@ -255,6 +330,9 @@ select {
 	float:left;
 }
 
+<<<<<<< HEAD
+>>>>>>> 93cba57f3033efbbf4850db342ebeed992886703
+=======
 .dbtablescroll{
 	font-size: 18px; 
 	width:50%; 
@@ -264,6 +342,66 @@ select {
 	max-height: 100%;
 	overflow: auto;
 	float: left;
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab
 }
 
+input[type="password"] {
+  width: 80%;
+  padding: 5px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+  display: block;
+}
 
+textarea[name="Message"] {
+  width: 80%;
+  padding: 5px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+form[type="typeform"] {
+  width: 80%;
+  padding: 5px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: black;
+}
+
+.button {
+  background-color: blue;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: black;
+}
+
+#id-2 {
+  display: inline-block;
+}
+#input-id-2 {
+  display: inline-block;
+}
+
+#user-detail-container {
+  background-color: #f0f0f0;
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  top: 100px;
+  right: 30px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bolder;
+  padding: 10px;
+  border: none;
+  display: none;
+}

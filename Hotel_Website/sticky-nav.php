@@ -1,3 +1,4 @@
+<!-- This page consists of sticky nav for the logged in customers -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,17 +10,12 @@
 <body>
     <div class="sticky-navbar" id="sticky-navbar">
         <ul>
-            <li> <a href="#">Home</a></li>
-            <li><a href="staying-in.php" class="staying-btn">Staying-In</a></li>
-            <ul>
-                <li><a href="#">Suites</a></li>
-                <li><a href="#">Panaromic Rooms</a></li>
-                <li><a href="#">Superior Rooms</a></li>
-            </ul>
-            <li><a href="#">Dining</a></li>
-            <li><a href="#">meals</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Offers</a></li>
+            <li> <a href="HomePage-login.php">Home</a></li>
+            <li><a href="staying-in-login.php">Staying-In</a></li>
+            <li><a href="dinein-login.php">Dining</a></li>
+            <li><a href="meals-login.php">meals</a></li>
+            <li><a href="events-login.php">Events</a></li>
+            <li><a href="myreservations.php">My Reservations</a></li>
         </ul>
     </div>
 </body>

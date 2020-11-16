@@ -61,40 +61,40 @@ $email = $_SESSION['User_Email'];
         </div>
 
     </div>
-    <h2>Offers</h2>
-    <div class="offers-container">
-        <div class="box">
-            <span class="fas fa-user" id="customer-icon"></span>
-            <div class="box-heading">Loyalty Offer</div>
-            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-            <box class="link">Read more</box>
+    <h3>Offers</h2>
+        <div class="offers-container">
+            <div class="box">
+                <span class="fas fa-user" id="customer-icon"></span>
+                <div class="box-heading">Loyalty Offer</div>
+                <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+                <box class="link">Read more</box>
+            </div>
+            <div class="box">
+                <span class="fab fa-cc-visa" id="creditcard-icon"></span>
+                <div class="box-heading">Credit-Card Offer</div>
+                <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+                <box class="link">Read more</box>
+            </div>
+            <div class="box">
+                <span class="fas fa-hourglass-end" id="lastmin-icon"></span>
+                <div class="box-heading">Last-Miniute Offer</div>
+                <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
+                <box class="link">Read more</box>
+            </div>
         </div>
-        <div class="box">
-            <span class="fab fa-cc-visa" id="creditcard-icon"></span>
-            <div class="box-heading">Credit-Card Offer</div>
-            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-            <box class="link">Read more</box>
         </div>
-        <div class="box">
-            <span class="fas fa-hourglass-end" id="lastmin-icon"></span>
-            <div class="box-heading">Last-Miniute Offer</div>
-            <div class="box-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, ex assumenda dolor aliquid, sequi recusandae voluptas </div>
-            <box class="link">Read more</box>
-        </div>
-    </div>
-    </div>
-    <?php include("footer-footer.php"); ?>
-    <script src="../Javascript/script.js"></script>
-    <script src="../Javascript/sticky-nav.js"></script>
-    <script>
-        function funcUserDetails() {
-            document.getElementById('user-detail-container').style.display = "block";
-        }
+        <?php include("footer-footer.php"); ?>
+        <script src="../Javascript/script.js"></script>
+        <script src="../Javascript/sticky-nav.js"></script>
+        <script>
+            function funcUserDetails() {
+                document.getElementById('user-detail-container').style.display = "block";
+            }
 
-        function funcCloseUserDetails() {
-            document.getElementById('user-detail-container').style.display = "none";
-        }
-    </script>
+            function funcCloseUserDetails() {
+                document.getElementById('user-detail-container').style.display = "none";
+            }
+        </script>
 </body>
 
 </html>

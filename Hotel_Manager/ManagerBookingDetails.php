@@ -27,16 +27,34 @@ $email = $_SESSION['User_Email'];
         
 	</center>
 		<div class="sidenav">	
+<<<<<<< HEAD:Hotel_Manager/ManagerBookingDetails.php
+			<button class="dropdown-btn">Booking Details&#128317;
+				</button>
+				<div class="dropdown-container">
+<<<<<<< HEAD:Hotel_Manager/ManagerBookingDetails.php
+=======
 			<button class="dropdown-btn">Booking Details
             <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/ManagerBookingDetails.html
 				<a href="HotelManagerDashboard.php"><font size = "4 px">Dashboard</font></a>
 				<a href="HotelManagerManageStaff.php"><font size = "4 px">Manage Staff</font></a>
                 <a href="HotelManagerPromotions.php"><font size = "4 px">Promotions</font></a>
                 <a href="HotelManagerCustomerFeedback.php"><font size = "4 px">Customer Feedback</font></a>
                 <a href="HotelManagerManageRoom.php"><font size = "4 px">Manage Room</font></a>
 				<a href="HotelManagerEarlyCheckOuts.php"><font size = "4 px">Early Check-Outs</font></a>
+<<<<<<< HEAD:Hotel_Manager/ManagerBookingDetails.php
+=======
+				<a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
+				<a href="HotelManagerManageStaff.html"><font size = "4 px">Manage Staff</font></a>
+                <a href="HotelManagerPromotions.html"><font size = "4 px">Promotions</font></a>
+                <a href="HotelManagerCustomerFeedback.html"><font size = "4 px">Customer Feedback</font></a>
+                <a href="HotelManagerManageRoom.html"><font size = "4 px">Manage Room</font></a>
+				<a href="HotelManagerEarlyCheckOuts.html"><font size = "4 px">Early Check-Outs</font></a>
+>>>>>>> 93cba57f3033efbbf4850db342ebeed992886703:Hotel_Manager/ManagerBookingDetails.html
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/ManagerBookingDetails.html
 				</div>
 		</div>
 		<div class = "top-right">

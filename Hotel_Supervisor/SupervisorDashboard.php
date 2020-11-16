@@ -16,7 +16,6 @@ $email = $_SESSION['User_Email'];
 <body bgcolor="black">
 	<center>
 		<img src="../Images/Logo.png" width="20%">
-		
 		<span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
 		<!--<br><span style="position:absolute;top:100px;right:40px;font-size:20px;color:white"></span>-->
 		<div id="user-detail-container">
@@ -31,16 +30,25 @@ $email = $_SESSION['User_Email'];
 			<i class="fa fa-caret-down"></i>
 		</button>
 		<div class="dropdown-container">
-
-			<a href="SupervisorAssignEmployeeTasks.php">Assign Employee tasks</a>
-			<a href="SupervisorManageMeals.php">Manage Meals</a>
-			<a href="SupervisorManageSetMenus.php">Manage Set Menu</a>
-			<a href="SupervisorLeaveRequest.php">Request a Leave</a>
+			<a href="SupervisorDashboard.php">
+				<font size="4 px">Dashboard</font>
+			</a>
+			<a href="SupervisorAssignEmployeeTasks.php">
+				<font size="4 px">Assign Employee Tasks</font>
+			</a>
+			<a href="SupervisorManageMeals.php">
+				<font size="4 px">Manage Set Menu</font>
+			</a>
+			<a href="SupervisorLeaveRequest.php">
+				<font size="4 px">Request a Leave</font>
+			</a>
 		</div>
 	</div>
 	<div class="top-right">
 		<table width="100%">
 			<tr>
+				<td>
+				</td>
 				<td>
 					<img src="../Images/ayomal.png" height="40%">
 				</td>
@@ -239,7 +247,6 @@ $email = $_SESSION['User_Email'];
 			</fieldset>
 		</form>
 	</div>
-
 	<script>
 		function funcUserDetails() {
 			document.getElementById('user-detail-container').style.display = "block";

@@ -1,4 +1,3 @@
-
 <!-- Insert New Meal -->
 <?php include("../Templates/connection.php");
 if(isset($_POST['insert'])){

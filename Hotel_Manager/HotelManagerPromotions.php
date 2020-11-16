@@ -25,16 +25,35 @@ $email = $_SESSION['User_Email'];
         </div>
 	</center>
 		<div class="sidenav">	
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+			<button class="dropdown-btn">Promotions &#128317;
+				
+				</button>
+				<div class="dropdown-container">
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+=======
 			<button class="dropdown-btn">Promotions 
 			<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
                 <a href="HotelManagerDashboard.php"><font size = "4 px">Dashboard</font></a>
 				<a href="HotelManagerManageStaff.php"><font size = "4 px">Manage Staff</font></a>
 				<a href="ManagerBookingDetails.php"><font size = "4 px">Booking Details</font></a>
 				<a href="HotelManagerCustomerFeedback.php"><font size = "4 px">Customer Feedback</font></a>
 				<a href="HotelManagerManageRoom.php"><font size = "4 px">Manage Room</font></a>
 				<a href="HotelManagerEarlyCheckOuts.php"><font size = "4 px">Early Check-Outs</font></a>
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+=======
+                <a href="HotelManagerDashboard.html"><font size = "4 px">Dashboard</font></a>
+				<a href="HotelManagerManageStaff.html"><font size = "4 px">Manage Staff</font></a>
+				<a href="ManagerBookingDetails.html"><font size = "4 px">Booking Details</font></a>
+				<a href="HotelManagerCustomerFeedback.html"><font size = "4 px">Customer Feedback</font></a>
+				<a href="HotelManagerManageRoom.html"><font size = "4 px">Manage Room</font></a>
+				<a href="HotelManagerEarlyCheckOuts.html"><font size = "4 px">Early Check-Outs</font></a>
+>>>>>>> 93cba57f3033efbbf4850db342ebeed992886703:Hotel_Manager/HotelManagerPromotions.html
+=======
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
 				</div>
 		</div>
 		<div class = "top-right">
@@ -188,6 +207,8 @@ $email = $_SESSION['User_Email'];
 			</td>
 		</tr>
 	</table>
+<<<<<<< HEAD:Hotel_Manager/HotelManagerPromotions.php
+=======
 	<form action="" method="POST">
         <fieldset style=" position:absolute; top:1300px; width: 75%; left:160px">
             <legend style="color:white; font-size: 20px">Update and Delete Promotions</legend>
@@ -247,6 +268,7 @@ $email = $_SESSION['User_Email'];
     <?php
     
     ?>
+>>>>>>> aa343214f299f5100baa68ba394797cb1643a1ab:Hotel_Manager/HotelManagerPromotions.html
 	<script>
 		function funcUserDetails() {
 			document.getElementById('user-detail-container').style.display = "block";

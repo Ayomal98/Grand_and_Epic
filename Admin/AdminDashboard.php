@@ -1,6 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['username'];
+$email = $_SESSION['User_Email'];
 ?>
 <html>
 
@@ -9,19 +10,27 @@ $username = $_SESSION['username'];
 	<title>
 		Admin Dashboard
 	</title>
+	<script src="https://kit.fontawesome.com/1d5f2c83e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body bgcolor="black">
 	<center>
 		<img src="../Images/Logo.png" width="20%">
+		<span class="far fa-caret-square-down" style="color:white;font-size:30px;position:absolute;right:100px;top:10px;" onclick="funcUserDetails()"></span>
+		<div id="user-detail-container">
+			<span class="fa fa-window-close" style="margin-left:130px;" onclick="funcCloseUserDetails()"></span>
+			<p style="margin-top: 2px; color:black"><?php echo "Logged in as $username"; ?></P>
+			<hr style="color:teal">
+			<a href="../Hotel_Website/logout.php"><input type="button" value="Log-out" name="logout-btn" style="margin-top:-7px;margin-left:85px;padding:0px;background-color:black;color:white;border-radius:5px;cursor:pointer"></a>
+		</div>
 	</center>
 	<div class="sidenav">
 		<button class="dropdown-btn">Dashboard &#128317;
-			<i class="fa fa-caret-down"></i>
+
 		</button>
 		<div class="dropdown-container">
 
-			<a href="AdminManageCoAdmins.html">Manage Co-admins</a>
+			<a href="AdminManageCoAdmins.php">Manage Co-admins</a>
 			<a href="AdminRespondToLeaveRequests.html">Respond to Leave Requests</a>
 			<a href="AdminViewBookings.html">View Booking Details</a>
 			<a href="AdminManageContent.html">Manage Content on Website</a>
@@ -33,8 +42,7 @@ $username = $_SESSION['username'];
 		<table width="100%">
 			<tr>
 				<td>
-					<p style="font-family :Lato; font-size:20px; color :white;">Logged in as<?php echo $username; ?>
-					</p>
+
 				</td>
 				<td>
 					<img src="../Images/ayomal.png" height="40%">
@@ -183,6 +191,15 @@ $username = $_SESSION['username'];
 			</td>
 		</tr>
 	</table>
+	<script>
+		function funcUserDetails() {
+			document.getElementById('user-detail-container').style.display = "block";
+		}
+
+		function funcCloseUserDetails() {
+			document.getElementById('user-detail-container').style.display = "none";
+		}
+	</script>
 
 </body>
 
